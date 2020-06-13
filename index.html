@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutfi Andriyanto</title>
+    <link rel="stylesheet" href="./vendor/tailwind.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <div id="vueApp">
+
+        <section id="sec1" class="relative">
+            <div class="container p-4 mx-auto h-full flex flex-col justify-center items-center">
+                <div class="div1 flex flex-col items-center justify-center w-full md:flex-row-reverse">
+                    <img class="profile rounded-full shadow-md" src="./assets/imgs/profile.jpg" alt="">
+                    <div class="myText flex flex-col items-center justify-center md:items-start md:pr-16">
+                        <div class="font-medium text-2xl mt-3 lg:text-3xl">Hi everyone</div>
+                        <div class="font-medium text-3xl -mt-3 lg:text-4xl">I'm <span class="font-bold myBlue">Lutfi
+                                Andriyanto</span>
+                        </div>
+                        <div class="font-medium lg:text-2xl">Junior Web Programmer</div>
+                    </div>
+                </div>
+                <!-- BEGIN SOSMED -->
+                <div class="sosmed flex flex-row mt-6 md:mt-16">
+                    <div class="sosmed-item mx-1 rounded" v-html="sosmedSVG.facebook"></div>
+                    <div class="sosmed-item mx-1 rounded" v-html="sosmedSVG.twitter"></div>
+                    <div class="sosmed-item mx-1 rounded" v-html="sosmedSVG.github"></div>
+                </div>
+            </div>
+            <!-- separator -->
+            <div v-html="separator.sep1"></div>
+        </section>
+
+
+        <section id="sec2" class="relative">
+            <div class="container p-4 flex flex-col justify-center items-center mx-auto">
+                <div class="font-bold text-2xl text-white mt-8 mb-8">ABOUT ME</div>
+                <div class="flex flex-col w-full mb-24 md:flex-row md:mb-32">
+                    <div class="text-center text-white mb-4 md:px-4 md:text-right md:w-1/2">{{ sec2.text[0] }}</div>
+                    <div class="text-center text-white mb-4 md:px-4 md:text-left md:w-1/2">{{ sec2.text[1] }}</div>
+                </div>
+            </div>
+            <!-- separator -->
+            <div v-html="separator.sep2"></div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="./vendor/vue.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

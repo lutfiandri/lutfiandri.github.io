@@ -1,0 +1,78 @@
+.separator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .separator {
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .separator {
+    height: 100px;
+  }
+}
+
+.myBlue {
+  color: #0099ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#sec1 {
+  height: 100vh;
+}
+
+#sec1 img.profile {
+  height: 160px;
+  width: 160px;
+}
+
+#sec1 .sosmed-item {
+  background: #0099ff;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #0099ff;
+  -webkit-transition: 200ms cubic-bezier(0.85, 0.01, 0, 0.93);
+  transition: 200ms cubic-bezier(0.85, 0.01, 0, 0.93);
+  cursor: pointer;
+}
+
+#sec1 .sosmed-item:hover {
+  background: white;
+}
+
+#sec1 .sosmed-item svg {
+  fill: white;
+  padding: 8px;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+#sec1 .sosmed-item svg:hover {
+  fill: #0099ff;
+}
+
+@media screen and (min-width: 1024px) {
+  #sec1 img.profile {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+#sec2 {
+  background: #0099ff;
+}
+/*# sourceMappingURL=main.css.map */
