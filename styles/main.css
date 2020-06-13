@@ -69,8 +69,29 @@
   }
 }
 
+#sec3 .card:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
 #sec3 .using img {
   height: 30px;
+}
+
+#sec4 .card:hover {
+  cursor: pointer;
+}
+
+#sec4 .card .icon {
+  width: 20px;
+}
+
+#sec4 .card svg {
+  height: 18px;
+  fill: white;
 }
 
 * {

@@ -1,0 +1,17 @@
+#sec4 {
+    .card {
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .icon {
+            width: 20px;
+        }
+
+        svg {
+            height: 18px;
+            fill: white;
+        }
+    }
+}
