@@ -8,6 +8,36 @@ var vueApp = new Vue( {
 				'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci tempora ipsam pariatur sequi voluptas quisquam doloribus dolore vero eligendi nisi ducimus qui laborum officiis temporibus, quasi dicta reprehenderit a atque.'
 			]
 		},
+		sec3: {
+			portfolios: [
+				{
+					title: 'Aplikasi Gizi SMA N 1 Pati',
+					imageUrl: 'assets/imgs/portfolios/countdown.png',
+					using: [
+						'assets/svgs/brands/javascript.svg',
+						'assets/svgs/brands/bootstrap-4.svg',
+					]
+				},
+				{
+					title: 'Countdown',
+					imageUrl: 'assets/imgs/portfolios/countdown.png',
+					using: [
+						'assets/svgs/brands/tailwindcss.svg',
+						'assets/svgs/brands/sass.svg',
+					]
+				},
+				{
+					title: 'Pengoreksi Pilihan Ganda',
+					imageUrl: 'assets/imgs/portfolios/countdown.png',
+					using: [
+						'assets/svgs/brands/vue-js.svg',
+						'assets/svgs/brands/bootstrap-4.svg',
+						'assets/svgs/brands/sass.svg',
+					]
+				},
+
+			]
+		},
 		sosmedSVG: {
 			facebook: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" /></svg>`,
 			twitter: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" /></svg>`,
@@ -15,7 +45,9 @@ var vueApp = new Vue( {
 		},
 		separator: {
 			sep1: `<svg class="separator" preserveAspectRatio="none" viewBox="0 0 1440 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd"d="M60 49.6327H0V76H1440V0L1380 5.53195C1320 10.8571 1200 22.2313 1080 35.8286C1060.12 38.1149 1040.25 40.4764 1020.37 42.8379C920.25 54.7343 820.125 66.6307 720 68.917C635.634 70.9888 551.269 65.9821 466.903 60.9754C431.269 58.8606 395.634 56.7459 360 55.1646C240 49.6327 120 49.6327 60 49.6327Z" fill="#0099FF" /></svg>`,
-			sep2: `<svg class="separator" preserveAspectRatio="none" viewBox="0 0 1440 118" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M120 0H0V118H1440V104.309L1320 86.9028C1314.47 86.1125 1308.68 85.2839 1302.65 84.4205C1177.88 66.5502 948.939 33.7622 720 17.4066C480 0 240 0 120 0Z" fill="white" /></svg>,`
+			sep2: `<svg class="separator" preserveAspectRatio="none" viewBox="0 0 1440 118" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M120 0H0V118H1440V104.309L1320 86.9028C1314.47 86.1125 1308.68 85.2839 1302.65 84.4205C1177.88 66.5502 948.939 33.7622 720 17.4066C480 0 240 0 120 0Z" fill="white" /></svg>`,
+			sep3: `<svg class="separator" preserveAspectRatio="none" viewBox="0 0 1440 131" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M120 72.7778L0 58.2222V131H1440V0L1320 24.2896C1316.38 25.0112 1312.65 25.7557 1308.82 26.5214C1185.52 51.1424 952.761 97.6229 720 106.71C480 116.444 240 87.3333 120 72.7778Z" fill="#0099FF"/></svg>
+			`
 		}
 	}
 } );
