@@ -4,19 +4,20 @@ var vueApp = new Vue( {
 		sec1: {},
 		sec2: {
 			text: [
+				`Hi, I'm Lutfi Andriyanto. I'm a junior web programmer. I started to study web programming at Q1 2019. `,
 				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat veritatis praesentium sequi, magnam maxime odit excepturi ex velit itaque possimus optio mollitia, similique soluta amet quaerat hic voluptatum magni tempore qui harum? Atque minus aliquam reprehenderit praesentium ipsum aperiam molestiae deleniti, sit ratione quod alias adipisci debitis sequi officiis magni?',
-				'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci tempora ipsam pariatur sequi voluptas quisquam doloribus dolore vero eligendi nisi ducimus qui laborum officiis temporibus, quasi dicta reprehenderit a atque.'
+				// 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci tempora ipsam pariatur sequi voluptas quisquam doloribus dolore vero eligendi nisi ducimus qui laborum officiis temporibus, quasi dicta reprehenderit a atque.'
 			]
 		},
 		sec3: {
 			portfolios: [
 				{
 					title: 'Aplikasi Gizi SMA N 1 Pati',
-					imageUrl: 'assets/imgs/portfolios/countdown.png',
+					imageUrl: 'assets/imgs/portfolios/agsa.png',
 					using: [
 						'assets/svgs/brands/bootstrap-4.svg',
 					],
-					url: '',
+					url: 'http://agsa.sman1pati.sch.id',
 				},
 				{
 					title: 'Countdown',
@@ -25,18 +26,17 @@ var vueApp = new Vue( {
 						'assets/svgs/brands/tailwindcss.svg',
 						'assets/svgs/brands/sass.svg',
 					],
-					url: '',
+					url: 'https://lutfiandri.github.io/i/countdown/',
 				},
 				{
 					title: 'Pengoreksi Pilihan Ganda',
-					imageUrl: 'assets/imgs/portfolios/countdown.png',
+					imageUrl: 'assets/imgs/portfolios/koreksi.png',
 					using: [
 						'assets/svgs/brands/vue-js.svg',
 						'assets/svgs/brands/bootstrap-4.svg',
 					],
-					url: '',
+					url: 'https://lutfiandri.github.io/i/koreksi/',
 				},
-
 			]
 		},
 		sosmed: {
@@ -44,7 +44,7 @@ var vueApp = new Vue( {
 				name: 'facebook',
 				text: 'Lutfi Andriyanto',
 				icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" /></svg>`,
-				url: 'https://facebook.com',
+				url: 'https://facebook.com/lutfi.andriyanto.3745',
 			},
 			twitter: {
 				name: 'twitter',
