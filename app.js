@@ -26,7 +26,7 @@ var vueApp = new Vue( {
 						'assets/svgs/brands/tailwindcss.svg',
 						'assets/svgs/brands/sass.svg',
 					],
-					url: 'https://lutfiandri.github.io/i/countdown/',
+					url: 'https://lutfiandri.github.io/countdown',
 				},
 				{
 					title: 'Pengoreksi Pilihan Ganda',
@@ -35,7 +35,7 @@ var vueApp = new Vue( {
 						'assets/svgs/brands/vue-js.svg',
 						'assets/svgs/brands/bootstrap-4.svg',
 					],
-					url: 'https://lutfiandri.github.io/i/koreksi/',
+					url: 'https://lutfiandri.github.io/pengoreksi-pilihan-ganda',
 				},
 			]
 		},

@@ -27,9 +27,12 @@
                 </div>
                 <!-- BEGIN SOSMED -->
                 <div class="sosmed flex flex-row mt-6 md:mt-16">
-                    <div class="sosmed-item mx-1 rounded" v-html="sosmed.facebook.icon"></div>
-                    <div class="sosmed-item mx-1 rounded" v-html="sosmed.twitter.icon"></div>
-                    <div class="sosmed-item mx-1 rounded" v-html="sosmed.github.icon"></div>
+                    <div class="sosmed-item mx-1 rounded" v-html="sosmed.facebook.icon"
+                        @click="openLink(sosmed.facebook.url)"></div>
+                    <div class="sosmed-item mx-1 rounded" v-html="sosmed.twitter.icon"
+                        @click="openLink(sosmed.twitter.url)"></div>
+                    <div class="sosmed-item mx-1 rounded" v-html="sosmed.github.icon"
+                        @click="openLink(sosmed.github.url)"></div>
                 </div>
             </div>
             <!-- separator -->
