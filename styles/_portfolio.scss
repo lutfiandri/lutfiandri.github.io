@@ -1,0 +1,109 @@
+.portfolio {
+    .container {
+        display: grid;
+        justify-content: center;
+        padding: 0;
+        grid-template-columns: 700px 200px 50px 4px;
+        grid-template-rows: 4px auto auto 80px;
+        grid-template-areas:
+            ".     .     . line1"
+            "title title . line1"
+            "boxes boxes . line1"
+            ".     .     . line1";
+    }
+
+    .title {
+        grid-area: title;
+        text-align: right;
+        padding: 50px 0 30px 0;
+        font-size: 1.5em;
+    }
+
+    .line1 {
+        grid-area: line1;
+    }
+
+    .boxes {
+        grid-area: boxes;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .box {
+            display: block;
+            width: 280px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            background: $aqua;
+            padding: 20px;
+            transition-duration: 1s;
+            text-decoration: none;
+
+            &:hover {
+                background: $aqua-darker;
+                cursor: pointer;
+            }
+
+            .title {
+                color: $black;
+                text-align: center;
+                font-size: 1.1em;
+                padding: 0 0 16px 0;
+                font-family: "Lato";
+                font-weight: 600;
+            }
+
+            .img {
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 4px 8px $black-transparent;
+            }
+
+            .date {
+                color: $black-transparent-2;
+                font-family: "Lato";
+                font-style: italic;
+                font-size: 0.8em;
+                text-align: right;
+            }
+
+            .tools {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding-top: 10px;
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 6px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .portfolio {
+        .container {
+            grid-template-columns: 460px 200px 40px 4px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        .container {
+            padding: 0 30px 0 30px;
+            grid-template-columns: 1fr 200px 20px 4px;
+        }
+        .boxes {
+            .box {
+                width: 100%;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

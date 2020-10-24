@@ -1,23 +1,30 @@
-// VARIABLES
-$myBlue: #0099ff;
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Lato:wght@400;700&display=swap");
+@import "./colors";
+@import "./hero";
+// @import "./mypicture";
+@import "./about";
+@import "./portfolio";
+@import "./footer";
 
-.myBlue {
-    color: $myBlue;
-}
-
-.bg-myBlue {
-    background: $myBlue;
-}
-
-// IMPORT OTHER
-@import "./separator";
-@import "./sec1";
-@import "./sec3";
-@import "./sec4";
-
-// DEFAULT
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html,
+body {
+    font-family: "Krona One";
+    background: $black;
+    color: $yellow;
+}
+
+.line {
+    height: 100%;
+    width: 100%;
+    background: $yellow;
+}
+
+// responsive
+// 1024 - 768 - 425
