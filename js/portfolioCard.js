@@ -30,7 +30,7 @@ const projects = [
         img: "pengoreksi-pilihan-ganda",
         date: "June 2020",
         tools: ["vue", "tailwind"],
-        link: "https://lutfiandri.github.io/pengoreksi-pilihan-ganda",
+        link: "https://lutfiandri-pengoreksi-pilihan-ganda.netlify.app",
     },
     {
         title: "Atom",
