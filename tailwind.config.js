@@ -16,6 +16,8 @@ module.exports = {
     extend: {
       minHeight: {
         'screen-no-header': 'calc(100vh - 56px)',
+        'screen-no-footer': 'calc(100vh - 224px)',
+        'screen-no-header-footer': 'calc(100vh - 56px - 224px)',
       },
     },
     colors: {
