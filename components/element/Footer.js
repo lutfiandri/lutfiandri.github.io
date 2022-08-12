@@ -59,7 +59,7 @@ function Footer() {
               >
                 Lutfi Andriyanto
               </div>
-              <div className="text-sm font-semibold">A Webdev Enthusiast!</div>
+              <div className="text-sm font-semibold">Webdev Enthusiast!</div>
             </div>
             <div className="text-sm font-semibold text-gray">
               © Lutfi Andriyanto. All Rights Reserved.
