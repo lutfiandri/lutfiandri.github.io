@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -6,6 +9,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      lgp: 'calc(1024px + 4rem)',
+      ...defaultTheme.screens,
+    },
     container: {
       padding: {
         DEFAULT: '1rem',
