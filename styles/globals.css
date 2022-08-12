@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply font-sans bg-gray-light;
+  @apply font-sans bg-gray-light text-gray-dark;
 }
 
 @tailwind components;

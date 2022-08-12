@@ -1,3 +1,4 @@
+import Footer from 'components/element/Footer';
 import Navbar from 'components/element/Navbar';
 import Head from 'next/head';
 
@@ -8,7 +9,8 @@ function DefaultLayout({ children, title = 'Lutfi Andriyanto' }) {
         <title>{title}</title>
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <main className="py-32">{children}</main>
+      <Footer />
     </>
   );
 }
