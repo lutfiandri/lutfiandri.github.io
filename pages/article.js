@@ -3,6 +3,8 @@ import DefaultLayout from 'components/layout/DefaultLayout';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+
 function Article() {
   return (
     <DefaultLayout title="Article - Lutfi Andriyanto">
@@ -12,22 +14,33 @@ function Article() {
             <h1 className="text-4xl font-extrabold">Latest Content</h1>
             <div className="text-lg font-semibold text-gray">5 Articles</div>
           </div>
-          <div className="-mx-8 gap-8 grid grid-cols-2">
-            <ArticleCard
-              article={{
-                title: 'coba 1',
-                desc: 'desc 1',
-                url: 'https://google.com',
-                external: true,
-              }}
-            />
-            <ArticleCard
-              article={{
-                title: 'Basic of Pandas',
-                desc: `Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.`,
-                slug: 'basic-of-pandas',
-              }}
-            />
+          <div className="-mx-8">
+            <ResponsiveMasonry columnsCountBreakPoints={{ 0: 1, 1024: 2 }}>
+              <Masonry gutter="2rem">
+                <ArticleCard
+                  article={{
+                    title: 'coba 1',
+                    desc: 'desc 1',
+                    url: 'https://google.com',
+                    external: true,
+                  }}
+                />
+                <ArticleCard
+                  article={{
+                    title: 'Basic of Pandas',
+                    desc: `Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.`,
+                    slug: 'basic-of-pandas',
+                  }}
+                />
+                <ArticleCard
+                  article={{
+                    title: 'Basic of Pandas',
+                    desc: `Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.`,
+                    slug: 'basic-of-pandas',
+                  }}
+                />
+              </Masonry>
+            </ResponsiveMasonry>
           </div>
         </div>
       </Container>
