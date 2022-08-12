@@ -9,7 +9,7 @@ function DefaultLayout({ children, title = 'Lutfi Andriyanto' }) {
         <title>{title}</title>
       </Head>
       <Navbar />
-      <main className="py-32">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

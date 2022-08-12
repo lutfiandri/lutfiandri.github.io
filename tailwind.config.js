@@ -13,7 +13,11 @@ module.exports = {
       },
       center: true,
     },
-    extend: {},
+    extend: {
+      minHeight: {
+        'screen-no-header': 'calc(100vh - 56px)',
+      },
+    },
     colors: {
       white: '#FFFFFF',
       black: '#000000',
