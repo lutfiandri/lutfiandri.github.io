@@ -33,6 +33,7 @@ export default function Home() {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
+              priority
             />
           </div>
           <div className="flex flex-col space-y-1">
