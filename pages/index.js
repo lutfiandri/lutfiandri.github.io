@@ -24,7 +24,7 @@ const SOCMEDS = [
 export default function Home() {
   return (
     <DefaultLayout>
-      <Container maxW="4xl">
+      <Container>
         <div className="min-h-screen-no-header flex items-center">
           <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden mr-8">
             <Image
