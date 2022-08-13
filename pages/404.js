@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function Custom404() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Not Found - Lutfi Andriyanto">
       <Container>
         <div className="min-h-screen-no-header-footer flex flex-col justify-center">
           <h1 className="text-3xl font-bold">Not Found</h1>
