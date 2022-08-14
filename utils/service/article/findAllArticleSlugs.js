@@ -2,19 +2,20 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from 'utils/config/firebase';
 import { firestoreCollection } from 'utils/config/firestoreCollection';
 
-export async function findAllArticles() {
+export async function findAllArticleSlugs() {
   try {
     const querySnapshot = await getDocs(
       collection(db, firestoreCollection.articles)
     );
-    const allData = [];
+    const allSlugs = [];
     querySnapshot.forEach((doc) => {
       const data = doc.data();
-      data.id = doc.id;
-      allData.push(data);
+      if (!data?.external) {
+        allSlug.push(data.slug);
+      }
     });
-    return { articles: allData, error: null };
+    return { slugs: allSlugs, error: null };
   } catch (error) {
-    return { articles: null, error: error };
+    return { slugs: null, error: error };
   }
 }
