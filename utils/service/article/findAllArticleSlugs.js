@@ -11,11 +11,11 @@ export async function findAllArticleSlugs() {
     querySnapshot.forEach((doc) => {
       const data = doc.data();
       if (!data?.external) {
-        allSlug.push(data.slug);
+        allSlugs.push(data.slug);
       }
     });
     return { slugs: allSlugs, error: null };
   } catch (error) {
-    return { slugs: null, error: error };
+    return { slugs: [], error: error };
   }
 }

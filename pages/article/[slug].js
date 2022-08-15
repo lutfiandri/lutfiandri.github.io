@@ -29,12 +29,13 @@ export default ReadArticle;
 export async function getStaticPaths() {
   const { slugs, error } = await findAllArticleSlugs();
 
+  const paths = slugs.map((slug) => ({
+    params: { slug: slug },
+  }));
+
   return {
-    paths: [
-      { params: { slug: 'learn-pandas-1' } },
-      { params: { slug: 'learn-tensorflow' } },
-    ],
-    fallback: 'blocking', // can also be true or 'blocking'
+    paths: paths,
+    fallback: 'blocking',
   };
 }
 
