@@ -1,9 +1,6 @@
-import { useRouter } from 'next/router';
-
-const { default: Link } = require('next/link');
+import Link from 'next/link';
 
 function ArticleCard({ article }) {
-  const router = useRouter();
   const { title, desc, url, slug, external } = article;
   return (
     <Link passHref={external} href={external ? url : `/article/${slug}`}>
