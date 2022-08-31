@@ -26,6 +26,7 @@ function PortfolioCard({ portfolio }) {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
+              className="group-hover:scale-105 duration-500"
             />
           </div>
         </RenderIf>
