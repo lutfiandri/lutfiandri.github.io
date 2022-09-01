@@ -8,6 +8,8 @@ import {
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { getMarkdownText } from 'utils/service/getMarkdownText';
+import getPaths, { getPortfolioPaths } from 'utils/getPaths';
+import gg from 'utils/getMarkdownText';
 
 function ReadArticle({ article }) {
   return (
@@ -35,23 +37,28 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: 'blocking',
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
+  // console.log(getPortfolioPaths());
+  const data = gg();
+
   const { slug } = params;
   const { article, error } = await findOneArticleBySlug(slug);
 
-  const { markdown, error: e } = await getMarkdownText(slug, ['articles']);
+  // const { markdown, error: e } = await getMarkdownText(slug, ['articles']);
 
-  if (e) {
-    return {
-      notFound: true,
-    };
-  }
+  // if (e) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
-  article.body = markdown.data;
+  // article.body = markdown.data;
+
+  article.body = data;
 
   return {
     props: {
