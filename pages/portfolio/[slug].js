@@ -3,10 +3,10 @@ import Container from 'components/element/Container';
 
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import { getArticleData } from 'utils/getMarkdownData';
-import { getArticleSlugs } from 'utils/getSlugs';
+import { getPortfolioData } from 'utils/getMarkdownData';
+import { getPortfolioSlugs } from 'utils/getSlugs';
 
-function ReadArticle({ article }) {
+function ReadPortfolio({ article }) {
   return (
     <DefaultLayout title={article?.meta?.title}>
       <Container>
@@ -21,10 +21,10 @@ function ReadArticle({ article }) {
   );
 }
 
-export default ReadArticle;
+export default ReadPortfolio;
 
 export async function getStaticPaths() {
-  const slugs = getArticleSlugs();
+  const slugs = getPortfolioSlugs();
 
   const paths = slugs.map((slug) => ({
     params: { slug: slug },
@@ -38,7 +38,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const article = getArticleData(slug);
+  const article = getPortfolioData(slug);
 
   return {
     props: {

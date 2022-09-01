@@ -1,8 +1,11 @@
 import ArticleCard from 'components/element/card/ArticleCard';
+import PostPreviewCard from 'components/element/card/PostPreviewCard';
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import PostsTemplate from 'components/template/PostsTemplate';
-import { findAllArticles } from 'utils/service/article';
+import { getArticleData } from 'utils/getMarkdownData';
+import { getArticleSlugs } from 'utils/getSlugs';
+// import { findAllArticles } from 'utils/service/article';
 
 function Article({ articles }) {
   return (
@@ -11,7 +14,11 @@ function Article({ articles }) {
         <div className="min-h-screen-no-header py-32">
           <PostsTemplate title="Latest Content" subtitle="Articles">
             {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+              <PostPreviewCard
+                key={article.meta.slug}
+                meta={article.meta}
+                baseUrl="article"
+              />
             ))}
           </PostsTemplate>
         </div>
@@ -23,12 +30,12 @@ function Article({ articles }) {
 export default Article;
 
 export async function getStaticProps() {
-  const { articles, error } = await findAllArticles();
+  const slugs = getArticleSlugs();
+  const articles = slugs.map((slug) => getArticleData(slug));
 
   return {
     props: {
       articles,
-      error,
     },
   };
 }
