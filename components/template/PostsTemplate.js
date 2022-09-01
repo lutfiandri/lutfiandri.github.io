@@ -7,9 +7,9 @@ function PostsTemplate({ title = 'Title', subtitle = 'Subtitle', children }) {
   // console.log(children);
   return (
     <div className="mx-8 lgp:mx-0">
-      <div className="flex justify-between items-baseline mb-8">
+      <div className="flex justify-between items-baseline mb-8 -mx-8 lgp:mx-0">
         <h1 className="text-4xl font-extrabold">{title}</h1>
-        <div className="text-lg font-semibold text-gray">
+        <div className="text-lg font-semibold text-gray hidden sm:block">
           {children.length} {subtitle}
         </div>
       </div>
@@ -19,7 +19,6 @@ function PostsTemplate({ title = 'Title', subtitle = 'Subtitle', children }) {
           autoArrange={true}
           breakpoints={{ default: 0, lg: 800 }}
           columns={{ default: 1, lg: 2 }}
-          // columns={2}
         >
           {children}
         </Masonry>

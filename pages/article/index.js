@@ -11,7 +11,7 @@ function Article({ articles }) {
   return (
     <DefaultLayout title="Article">
       <Container>
-        <div className="min-h-screen-no-header py-32">
+        <div className="min-h-screen-no-header pt-12 pb-32">
           <PostsTemplate title="Latest Content" subtitle="Articles">
             {articles.map((article) => (
               <PostPreviewCard

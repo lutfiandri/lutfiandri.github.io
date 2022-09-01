@@ -10,7 +10,7 @@ function ReadArticle({ article }) {
   return (
     <DefaultLayout title={article?.meta?.title}>
       <Container>
-        <div className="min-h-screen-no-header py-32">
+        <div className="min-h-screen-no-header pt-12 pb-32">
           <div>{article?.meta?.title}</div>
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {article?.body}

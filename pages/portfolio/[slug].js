@@ -12,8 +12,11 @@ function ReadPortfolio({ portfolio }) {
   return (
     <DefaultLayout title={portfolio.meta.title}>
       <Container>
-        <div className="min-h-screen-no-header py-32">
-          <h1 className="">{portfolio.meta.title}</h1>
+        <div className="min-h-screen-no-header pt-12 pb-32">
+          <h1 className="text-4xl font-bold">{portfolio.meta.title}</h1>
+          <div>
+            <div></div>
+          </div>
           <RenderIf when={portfolio?.meta?.hero?.length > 1}>
             <div className="h-8"></div>
             <Carousel

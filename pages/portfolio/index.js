@@ -9,8 +9,8 @@ function Portfolio({ portfolios }) {
   return (
     <DefaultLayout title="Portfolio">
       <Container>
-        <div className="min-h-screen-no-header py-32">
-          <PostsTemplate title="Latest Content" subtitle="Projects">
+        <div className="min-h-screen-no-header pt-12 pb-32">
+          <PostsTemplate title="My Portfolio" subtitle="Projects">
             {portfolios.map((portfolio) => (
               <PostPreviewCard
                 key={portfolio.meta.slug}
