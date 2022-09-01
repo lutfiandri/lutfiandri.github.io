@@ -12,4 +12,13 @@ body {
 }
 
 @tailwind components;
+
+.swiper-pagination-bullet {
+  @apply !bg-gray !opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-blue !opacity-100;
+}
+
 @tailwind utilities;

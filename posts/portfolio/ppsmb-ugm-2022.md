@@ -7,4 +7,9 @@ tags:
   - Next.js
   - Tailwindcss
   - Strapi
+hero:
+  - beranda.png
+  - faq.png
+  - palapedia-menu.png
+  - palapedia-read.png
 ---

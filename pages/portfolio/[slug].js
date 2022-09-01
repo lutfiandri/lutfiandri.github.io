@@ -1,19 +1,30 @@
 import DefaultLayout from 'components/layout/DefaultLayout';
 import Container from 'components/element/Container';
+import Carousel from 'components/element/Carousel';
 
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { getPortfolioData } from 'utils/getMarkdownData';
 import { getPortfolioSlugs } from 'utils/getSlugs';
+import RenderIf from 'components/element/RenderIf';
 
-function ReadPortfolio({ article }) {
+function ReadPortfolio({ portfolio }) {
   return (
-    <DefaultLayout title={article?.meta?.title}>
+    <DefaultLayout title={portfolio.meta.title}>
       <Container>
         <div className="min-h-screen-no-header py-32">
-          <div>{article?.meta?.title}</div>
+          <h1 className="">{portfolio.meta.title}</h1>
+          <RenderIf when={portfolio?.meta?.hero?.length > 1}>
+            <div className="h-8"></div>
+            <Carousel
+              imageSrcs={portfolio.meta.hero.map(
+                (src) => `/portfolio/${portfolio.meta.slug}/${src}`
+              )}
+            />
+          </RenderIf>
+
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-            {article?.body}
+            {portfolio?.body}
           </ReactMarkdown>
         </div>
       </Container>
@@ -38,11 +49,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const article = getPortfolioData(slug);
+  const portfolio = getPortfolioData(slug);
 
   return {
     props: {
-      article: article,
+      portfolio: portfolio,
     },
   };
 }
