@@ -87,6 +87,22 @@ const Hr = () => (
   </div>
 );
 
+const Table = ({ children }) => (
+  <table className="border-spacing-0">{children}</table>
+);
+
+const Th = ({ children }) => (
+  <th className="font-bold px-3 py-1 border border-gray rounded-2xl">
+    {children}
+  </th>
+);
+
+const Td = ({ children }) => (
+  <td className="px-3 py-1 border border-gray rounded-2xl bg-red">
+    {children}
+  </td>
+);
+
 const PostMarkdownComponents = {
   p: P,
   img: Img,
@@ -100,6 +116,9 @@ const PostMarkdownComponents = {
   blockquote: Blockquote,
   code: Code,
   hr: Hr,
+  table: Table,
+  th: Th,
+  td: Td,
 };
 
 export default PostMarkdownComponents;
