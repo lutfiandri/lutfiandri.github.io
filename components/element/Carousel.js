@@ -24,10 +24,11 @@ function Carousel({ imageSrcs = [] }) {
         }}
         grabCursor={true}
         modules={[Autoplay, Pagination]}
+        className="rounded-lg my-4"
       >
         {imageSrcs.map((src) => (
           <SwiperSlide key={src}>
-            <img className="rounded-sm" src={src} alt="" />
+            <img src={src} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>

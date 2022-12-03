@@ -2,7 +2,7 @@ import ArticleCard from 'components/element/card/ArticleCard';
 import PostPreviewCard from 'components/element/card/PostPreviewCard';
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
-import PostsTemplate from 'components/template/PostsTemplate';
+import PostsTemplate from 'components/template/post/PostContainerTemplate';
 import { getArticleData } from 'utils/getMarkdownData';
 import { getArticleSlugs } from 'utils/getSlugs';
 // import { findAllArticles } from 'utils/service/article';

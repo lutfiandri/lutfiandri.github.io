@@ -1,7 +1,7 @@
 import PostPreviewCard from 'components/element/card/PostPreviewCard';
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
-import PostsTemplate from 'components/template/PostsTemplate';
+import PostsTemplate from 'components/template/post/PostContainerTemplate';
 import { getPortfolioData } from 'utils/getMarkdownData';
 import { getPortfolioSlugs } from 'utils/getSlugs';
 

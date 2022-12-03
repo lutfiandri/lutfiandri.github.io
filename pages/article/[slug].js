@@ -1,20 +1,32 @@
 import DefaultLayout from 'components/layout/DefaultLayout';
 import Container from 'components/element/Container';
+import PostMarkdown from 'components/template/post/PostMarkdown';
 
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 import { getArticleData } from 'utils/getMarkdownData';
 import { getArticleSlugs } from 'utils/getSlugs';
+import RenderIf from 'components/element/RenderIf';
+import Carousel from 'components/element/Carousel';
+import { Img } from 'components/element/img/Img';
 
 function ReadArticle({ article }) {
   return (
     <DefaultLayout title={article?.meta?.title}>
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <div>{article?.meta?.title}</div>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-            {article?.body}
-          </ReactMarkdown>
+          <h1 className="text-3xl font-bold mb-8">{article?.meta?.title}</h1>
+          <RenderIf when={article?.meta?.hero?.length > 1}>
+            <Carousel
+              imageSrcs={article.meta.hero.map(
+                (src) => `/article/${article.meta.slug}/${src}`
+              )}
+            />
+          </RenderIf>
+
+          <RenderIf when={article?.meta?.hero?.length === 1}>
+            <Img src={`/article/${article.meta.slug}/${article.meta.hero}`} />
+          </RenderIf>
+
+          <PostMarkdown>{article?.body}</PostMarkdown>
         </div>
       </Container>
     </DefaultLayout>

@@ -3,7 +3,11 @@
 import dynamic from 'next/dynamic';
 const Masonry = dynamic(() => import('react-smart-masonry'), { ssr: false });
 
-function PostsTemplate({ title = 'Title', subtitle = 'Subtitle', children }) {
+function PostContainerTemplate({
+  title = 'Title',
+  subtitle = 'Subtitle',
+  children,
+}) {
   // console.log(children);
   return (
     <div className="mx-8 lgp:mx-0">
@@ -27,4 +31,4 @@ function PostsTemplate({ title = 'Title', subtitle = 'Subtitle', children }) {
   );
 }
 
-export default PostsTemplate;
+export default PostContainerTemplate;

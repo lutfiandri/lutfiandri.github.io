@@ -1,24 +1,20 @@
 import DefaultLayout from 'components/layout/DefaultLayout';
 import Container from 'components/element/Container';
 import Carousel from 'components/element/Carousel';
+import RenderIf from 'components/element/RenderIf';
+import PostMarkdown from 'components/template/post/PostMarkdown';
 
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 import { getPortfolioData } from 'utils/getMarkdownData';
 import { getPortfolioSlugs } from 'utils/getSlugs';
-import RenderIf from 'components/element/RenderIf';
+import { Img } from 'components/element/img/Img';
 
 function ReadPortfolio({ portfolio }) {
   return (
     <DefaultLayout title={portfolio.meta.title}>
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <h1 className="text-4xl font-bold">{portfolio.meta.title}</h1>
-          <div>
-            <div></div>
-          </div>
+          <h1 className="text-3xl font-bold mb-8">{portfolio?.meta?.title}</h1>
           <RenderIf when={portfolio?.meta?.hero?.length > 1}>
-            <div className="h-8"></div>
             <Carousel
               imageSrcs={portfolio.meta.hero.map(
                 (src) => `/portfolio/${portfolio.meta.slug}/${src}`
@@ -26,9 +22,13 @@ function ReadPortfolio({ portfolio }) {
             />
           </RenderIf>
 
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-            {portfolio?.body}
-          </ReactMarkdown>
+          <RenderIf when={portfolio?.meta?.hero?.length === 1}>
+            <Img
+              src={`/portfolio/${portfolio.meta.slug}/${portfolio.meta.hero}`}
+            />
+          </RenderIf>
+
+          <PostMarkdown>{portfolio?.body}</PostMarkdown>
         </div>
       </Container>
     </DefaultLayout>

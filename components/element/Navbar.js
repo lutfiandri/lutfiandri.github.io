@@ -23,7 +23,7 @@ function Navbar() {
           <div
             role="button"
             onClick={() => router?.push('/')}
-            className="text-lg font-bold text-blue py-3"
+            className="text-lg font-bold text-blue py-4"
           >
             Lutfi Andriyanto
           </div>
@@ -35,7 +35,7 @@ function Navbar() {
                 role="button"
                 onClick={() => router?.push(route.url)}
                 className={clsx(
-                  'p-3 m-1',
+                  'py-4 px-3 m-1',
                   router?.pathname === route.url ? 'font-bold' : 'font-semibold'
                 )}
               >
