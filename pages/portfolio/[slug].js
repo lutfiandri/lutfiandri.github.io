@@ -16,15 +16,15 @@ function ReadPortfolio({ portfolio }) {
           <h1 className="text-3xl font-bold mb-8">{portfolio?.meta?.title}</h1>
           <RenderIf when={portfolio?.meta?.hero?.length > 1}>
             <Carousel
-              imageSrcs={portfolio.meta.hero.map(
-                (src) => `/portfolio/${portfolio.meta.slug}/${src}`
+              imageSrcs={portfolio?.meta?.hero?.map(
+                (src) => `/portfolio/${portfolio?.meta?.slug}/${src}`
               )}
             />
           </RenderIf>
 
           <RenderIf when={portfolio?.meta?.hero?.length === 1}>
             <Img
-              src={`/portfolio/${portfolio.meta.slug}/${portfolio.meta.hero}`}
+              src={`/portfolio/${portfolio?.meta?.slug}/${portfolio?.meta?.hero}`}
             />
           </RenderIf>
 

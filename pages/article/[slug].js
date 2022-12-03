@@ -16,14 +16,16 @@ function ReadArticle({ article }) {
           <h1 className="text-3xl font-bold mb-8">{article?.meta?.title}</h1>
           <RenderIf when={article?.meta?.hero?.length > 1}>
             <Carousel
-              imageSrcs={article.meta.hero.map(
-                (src) => `/article/${article.meta.slug}/${src}`
+              imageSrcs={article?.meta?.hero?.map(
+                (src) => `/article/${article?.meta?.slug}/${src}`
               )}
             />
           </RenderIf>
 
           <RenderIf when={article?.meta?.hero?.length === 1}>
-            <Img src={`/article/${article.meta.slug}/${article.meta.hero}`} />
+            <Img
+              src={`/article/${article?.meta?.slug}/${article?.meta?.hero}`}
+            />
           </RenderIf>
 
           <PostMarkdown>{article?.body}</PostMarkdown>
