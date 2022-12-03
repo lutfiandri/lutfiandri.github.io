@@ -1,7 +1,17 @@
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, path: false };
 
-module.exports = nextConfig
+    return config;
+  },
+};
+
+module.exports = nextConfig;
