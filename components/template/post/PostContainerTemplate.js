@@ -13,13 +13,13 @@ function PostContainerTemplate({
     <div className="mx-8 lgp:mx-0">
       <div className="flex justify-between items-baseline mb-8 -mx-8 lgp:mx-0">
         <h1 className="text-4xl font-extrabold">{title}</h1>
-        <div className="text-lg font-semibold text-gray hidden sm:block">
+        <p className="text-lg font-semibold text-gray hidden sm:block">
           {children.length} {subtitle}
-        </div>
+        </p>
       </div>
       <div className="-mx-8">
         <Masonry
-          gap="2rem"
+          gap={{ default: '1rem', lg: '2rem' }}
           autoArrange={true}
           breakpoints={{ default: 0, lg: 800 }}
           columns={{ default: 1, lg: 2 }}
