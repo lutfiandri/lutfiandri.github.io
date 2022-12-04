@@ -61,8 +61,8 @@ function Footer() {
               </div>
               <div className="text-sm font-semibold">Webdev Enthusiast!</div>
             </div>
-            <div className="text-sm font-semibold text-gray">
-              © Lutfi Andriyanto. All Rights Reserved.
+            <div className="text-xs font-semibold text-gray">
+              © 2022-present Lutfi Andriyanto. All Rights Reserved.
             </div>
           </div>
 

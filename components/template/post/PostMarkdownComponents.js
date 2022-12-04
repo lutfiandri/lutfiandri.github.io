@@ -40,7 +40,7 @@ const A = ({ children, href }) => {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="text-c-blue-500 hover:text-c-blue-900 hover:underline transition-all"
+      className="text-blue hover:underline transition-all"
     >
       {children}
     </a>
@@ -69,7 +69,7 @@ const Li = ({ children }) => {
 
 const Blockquote = ({ children }) => {
   return (
-    <blockquote className="bg-blue-light px-6 pt-2 py-[0.1px] rounded-lg border-l-4 border-blue my-4">
+    <blockquote className="bg-blue-light px-6 p-2 rounded-lg border-l-4 border-blue my-4">
       {children}
     </blockquote>
   );
