@@ -8,7 +8,7 @@ function PostPreviewCard({ meta, baseUrl }) {
   return (
     <Link passHref={external} href={external ? url : `/${baseUrl}/${slug}`}>
       <a
-        className="group block w-full rounded-lg bg-white p-8"
+        className="group block w-full rounded-lg bg-white p-4 sm:p-8"
         target={external ? '_blank' : ''}
       >
         <RenderIf when={thumbnail}>
