@@ -51,7 +51,7 @@ function Footer() {
       <Container>
         <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row md:items-stretch">
           {/* left */}
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between text-center md:text-left">
             <div>
               <div
                 role="button"
