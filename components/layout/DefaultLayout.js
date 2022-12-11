@@ -1,5 +1,5 @@
-import Footer from 'components/element/Footer';
-import Navbar from 'components/element/Navbar';
+import Footer from 'components/template/footer/Footer';
+import Navbar from 'components/template/navbar/Navbar';
 import Head from 'next/head';
 
 function DefaultLayout({ children, title = 'Lutfi Andriyanto' }) {

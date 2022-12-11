@@ -3,12 +3,20 @@
 @tailwind base;
 
 * {
-  @apply transition-all duration-150;
+  /* @apply transition-all duration-100 ease-bounce-out delay-[0ms]; */
+}
+
+::-webkit-scrollbar {
+  @apply h-[12px] w-[12px];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply w-full rounded-md border-2 border-solid border-gray-light bg-gray;
 }
 
 html,
 body {
-  @apply font-sans bg-gray-light text-gray-dark;
+  @apply bg-gray-light font-sans text-gray-dark transition-all delay-[0ms] duration-100 dark:bg-gray-dark dark:text-gray-light;
 }
 
 @tailwind components;

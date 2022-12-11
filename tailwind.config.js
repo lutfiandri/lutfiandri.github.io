@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -22,9 +23,12 @@ module.exports = {
     },
     extend: {
       minHeight: {
-        'screen-no-header': 'calc(100vh - 56px)',
+        'screen-no-header': 'calc(100vh - 64px)',
         'screen-no-footer': 'calc(100vh - 224px)',
-        'screen-no-header-footer': 'calc(100vh - 56px - 224px)',
+        'screen-no-header-footer': 'calc(100vh - 64px - 224px)',
+      },
+      transitionTimingFunction: {
+        'bounce-out': 'cubic-bezier(.56,-0.04,.22,1.47)',
       },
     },
     colors: {

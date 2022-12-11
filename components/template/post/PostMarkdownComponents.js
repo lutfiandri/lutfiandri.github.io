@@ -1,20 +1,16 @@
-import RenderIf from 'components/element/RenderIf';
 import { Img as NImage } from 'components/element/img/Img';
+import RenderIf from 'components/element/RenderIf';
 
 const P = ({ children }) => {
-  return (
-    <p className="my-4 leading-8 text-lg md:text-b-2xl text-justify">
-      {children}
-    </p>
-  );
+  return <p className="my-4 text-justify text-lg leading-8">{children}</p>;
 };
 
 const Img = ({ src, alt, title }) => {
   return (
-    <figure className="my-4 w-full max-w-[600px] mx-auto">
+    <figure className="my-4 mx-auto w-full max-w-[600px]">
       <NImage src={src} alt={alt} unoptimized />
       <RenderIf when={title}>
-        <figcaption className="italic text-[0.7em] text-center text-neutral-700">
+        <figcaption className="text-center text-[0.7em] italic">
           {title}
         </figcaption>
       </RenderIf>
@@ -23,15 +19,15 @@ const Img = ({ src, alt, title }) => {
 };
 
 const H1 = ({ children }) => {
-  return <h1 className="mt-8 mb-4 leading-8 text-2xl font-bold">{children}</h1>;
+  return <h1 className="mt-8 mb-4 text-2xl font-bold leading-8">{children}</h1>;
 };
 
 const H2 = ({ children }) => {
-  return <h2 className="mt-6 mb-4 leading-8 text-xl font-bold">{children}</h2>;
+  return <h2 className="mt-6 mb-4 text-xl font-bold leading-8">{children}</h2>;
 };
 
 const H3 = ({ children }) => {
-  return <h3 className="mt-6 mb-4 leading-8 text-lg font-bold">{children}</h3>;
+  return <h3 className="mt-6 mb-4 text-lg font-bold leading-8">{children}</h3>;
 };
 
 const A = ({ children, href }) => {
@@ -40,7 +36,7 @@ const A = ({ children, href }) => {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="text-blue hover:underline transition-all"
+      className="text-blue transition-all hover:underline"
     >
       {children}
     </a>
@@ -49,7 +45,7 @@ const A = ({ children, href }) => {
 
 const Ul = ({ children }) => {
   return (
-    <ul className="my-4 leading-8 text-b-2xl text-justify list-outside list-disc ml-6">
+    <ul className="my-4 ml-6 list-outside list-disc text-justify leading-8">
       {children}
     </ul>
   );
@@ -57,30 +53,28 @@ const Ul = ({ children }) => {
 
 const Ol = ({ children }) => {
   return (
-    <ol className="my-4 leading-8 text-b-2xl text-justify list-outside list-decimal ml-6">
+    <ol className="my-4 ml-6 list-outside list-decimal text-justify leading-8">
       {children}
     </ol>
   );
 };
 
 const Li = ({ children }) => {
-  return <li className="mt-1 mb-1">{children}</li>;
+  return <li className="my-1">{children}</li>;
 };
 
 const Blockquote = ({ children }) => {
   return (
-    <blockquote className="bg-blue-light px-6 p-2 rounded-lg border-l-4 border-blue my-4">
+    <blockquote className="my-4 rounded-lg border-l-4 border-blue bg-blue-light p-2 px-6">
       {children}
     </blockquote>
   );
 };
 
-const Code = ({ children }) => (
-  <span className="text-[0.9em] font-mono">{children}</span>
-);
+const Code = ({ children }) => <span className="text-[0.9em]">{children}</span>;
 
 const Hr = () => (
-  <div className="text-center my-8 select-none text-xl space-x-4">
+  <div className="my-8 select-none space-x-4 text-center text-xl">
     <span>•</span>
     <span>•</span>
     <span>•</span>
@@ -92,13 +86,13 @@ const Table = ({ children }) => (
 );
 
 const Th = ({ children }) => (
-  <th className="font-bold px-3 py-1 border border-gray rounded-2xl">
+  <th className="rounded-2xl border border-gray px-3 py-1 font-bold">
     {children}
   </th>
 );
 
 const Td = ({ children }) => (
-  <td className="px-3 py-1 border border-gray rounded-2xl bg-red">
+  <td className="rounded-2xl border border-gray bg-red px-3 py-1">
     {children}
   </td>
 );

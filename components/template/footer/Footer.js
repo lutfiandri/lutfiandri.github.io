@@ -1,6 +1,7 @@
 import Container from 'components/element/Container';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Copyright from './Copyright';
 
 const LINKS = [
   {
@@ -48,7 +49,7 @@ function Footer() {
   return (
     <footer className="bg-blue-light py-10">
       <Container>
-        <div className="flex justify-between">
+        <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row md:items-stretch">
           {/* left */}
           <div className="flex flex-col justify-between">
             <div>
@@ -59,10 +60,10 @@ function Footer() {
               >
                 Lutfi Andriyanto
               </div>
-              <div className="text-sm font-semibold">Webdev Enthusiast!</div>
+              <div className="text-sm font-semibold">Webdev Enthusiast</div>
             </div>
-            <div className="text-xs font-semibold text-gray">
-              © 2022-present Lutfi Andriyanto. All Rights Reserved.
+            <div className="hidden md:block">
+              <Copyright />
             </div>
           </div>
 
@@ -73,6 +74,10 @@ function Footer() {
               <VerticalMenu title="Contact" items={CONTACTS} />
             </div>
           </div>
+
+          <div className="block md:hidden">
+            <Copyright />
+          </div>
         </div>
       </Container>
     </footer>
@@ -82,14 +87,14 @@ function Footer() {
 export default Footer;
 
 function MenuTitle({ title }) {
-  return <div className="font-semibold text-gray mb-3">{title}</div>;
+  return <div className="mb-3 font-semibold text-gray">{title}</div>;
 }
 
 function MenuItem({ item }) {
   return (
     <Link href={item.url} passHref={item.external}>
       <a
-        className="block font-semibold mb-2"
+        className="mb-2 block font-semibold"
         target={item.external ? '_blank' : ''}
       >
         {item.name}

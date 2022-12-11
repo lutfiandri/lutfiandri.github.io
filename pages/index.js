@@ -1,7 +1,7 @@
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import Image from 'next/image';
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const SOCMEDS = [
   {
@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <DefaultLayout>
       <Container>
-        <div className="min-h-screen-no-header flex items-center">
-          <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden mr-8">
+        <div className="flex min-h-screen-no-header items-center bg-red md:bg-blue-light">
+          <div className="relative mr-8 h-[200px] w-[200px] overflow-hidden rounded-lg">
             <Image
               src="/images/lutfi-andriyanto.webp"
               alt="Lutfi Andriyanto"
@@ -38,7 +38,9 @@ export default function Home() {
           </div>
           <div className="flex flex-col space-y-1">
             <div className="text-3xl font-bold">Hi, it&apos;s me</div>
-            <h1 className="text-4xl font-bold text-blue">Lutfi Andriyanto</h1>
+            <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
+              Lutfi Andriyanto
+            </h1>
             <h2 className="text-lg font-bold">a Webdev Enthusiast!</h2>
             <div className="h-6"></div>
             <div className="flex">
@@ -56,7 +58,7 @@ function Socmeds({ socmeds = [] }) {
     <>
       {socmeds.map((socmed) => (
         <a key={socmed.name} href={socmed.url} target="_blank" rel="noreferrer">
-          <socmed.icon className="w-6 h-auto mr-4" />
+          <socmed.icon className="mr-4 h-auto w-6" />
         </a>
       ))}
     </>
