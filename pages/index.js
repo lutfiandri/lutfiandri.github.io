@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <DefaultLayout>
       <Container>
-        <div className="min-h-screen-no-header flex items-center">
-          <div className="relative w-[200px] h-[200px] rounded-lg overflow-hidden mr-8">
+        <div className="flex min-h-screen-no-header items-center bg-red md:bg-blue-light">
+          <div className="relative mr-8 h-[200px] w-[200px] overflow-hidden rounded-lg">
             <Image
               src="/images/lutfi-andriyanto.webp"
               alt="Lutfi Andriyanto"
@@ -58,7 +58,7 @@ function Socmeds({ socmeds = [] }) {
     <>
       {socmeds.map((socmed) => (
         <a key={socmed.name} href={socmed.url} target="_blank" rel="noreferrer">
-          <socmed.icon className="w-6 h-auto mr-4" />
+          <socmed.icon className="mr-4 h-auto w-6" />
         </a>
       ))}
     </>

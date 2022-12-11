@@ -5,8 +5,8 @@ function ThemeTogglerButton({ isDark, className }) {
   const circleBaseClassName = useMemo(() => {
     return clsx(
       'origin-center ease-bounce-out',
-      isDark ? 'scale-0' : 'scale-1',
-      isDark ? 'duration-0' : 'duration-500'
+      isDark ? 'scale-0' : 'scale-100',
+      isDark ? 'duration-[0ms]' : 'duration-500'
     );
   }, [isDark]);
 
@@ -17,7 +17,7 @@ function ThemeTogglerButton({ isDark, className }) {
     >
       <svg
         className={clsx(
-          'w-5 h-5 overflow-visible duration-500',
+          'h-5 w-5 overflow-visible duration-500',
           isDark ? 'rotate-[40deg]' : 'rotate-[150deg] !delay-[0ms]',
           // isDark ? 'rotate-[40deg] delay-500' : 'rotate-[150deg]',
           className
@@ -38,7 +38,7 @@ function ThemeTogglerButton({ isDark, className }) {
           cy="9"
           r={isDark ? '8' : '5'}
           className={clsx(
-            'ease-bounce-out duration-500'
+            'duration-500 ease-bounce-out'
             // isDark ? 'delay-500' : ''
           )}
           fill="currentColor"

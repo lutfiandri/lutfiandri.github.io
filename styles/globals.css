@@ -7,16 +7,16 @@
 }
 
 ::-webkit-scrollbar {
-  @apply w-[12px] h-[12px];
+  @apply h-[12px] w-[12px];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray w-full rounded-md border-2 border-solid border-gray-light;
+  @apply w-full rounded-md border-2 border-solid border-gray-light bg-gray;
 }
 
 html,
 body {
-  @apply font-sans bg-gray-light text-gray-dark dark:bg-gray-dark dark:text-gray-light transition-all duration-100 delay-[0ms];
+  @apply bg-gray-light font-sans text-gray-dark transition-all delay-[0ms] duration-100 dark:bg-gray-dark dark:text-gray-light;
 }
 
 @tailwind components;

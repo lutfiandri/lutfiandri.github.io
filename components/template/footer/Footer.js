@@ -82,14 +82,14 @@ function Footer() {
 export default Footer;
 
 function MenuTitle({ title }) {
-  return <div className="font-semibold text-gray mb-3">{title}</div>;
+  return <div className="mb-3 font-semibold text-gray">{title}</div>;
 }
 
 function MenuItem({ item }) {
   return (
     <Link href={item.url} passHref={item.external}>
       <a
-        className="block font-semibold mb-2"
+        className="mb-2 block font-semibold"
         target={item.external ? '_blank' : ''}
       >
         {item.name}

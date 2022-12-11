@@ -24,7 +24,7 @@ function Carousel({ imageSrcs = [] }) {
         }}
         grabCursor={true}
         modules={[Autoplay, Pagination]}
-        className="rounded-lg my-4 aspect-video"
+        className="my-4 aspect-video rounded-lg"
       >
         {imageSrcs.map((src) => (
           <SwiperSlide key={src}>

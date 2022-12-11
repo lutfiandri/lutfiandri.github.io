@@ -28,12 +28,12 @@ function Navbar() {
   );
 
   return (
-    <nav className="bg-gray-light dark:bg-gray-dark text-gray-dark dark:text-gray-light z-50 sticky top-0">
+    <nav className="sticky top-0 z-50 bg-gray-light text-gray-dark dark:bg-gray-dark dark:text-gray-light">
       <Container>
         <div className="flex items-center justify-between">
           <div className="flex items-baseline">
             <Link href="/">
-              <div role="button" className="text-lg font-bold text-blue py-4">
+              <div role="button" className="py-4 text-lg font-bold text-blue">
                 Lutfi Andriyanto
               </div>
             </Link>
@@ -44,7 +44,7 @@ function Navbar() {
                   <div
                     role="button"
                     className={clsx(
-                      'py-4 px-3 m-1',
+                      'm-1 py-4 px-3',
                       router?.pathname === route.url
                         ? 'font-bold'
                         : 'font-semibold'

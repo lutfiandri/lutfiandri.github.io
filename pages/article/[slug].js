@@ -13,7 +13,7 @@ function ReadArticle({ article }) {
     <DefaultLayout title={article?.meta?.title}>
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <h1 className="text-3xl font-bold mb-8">{article?.meta?.title}</h1>
+          <h1 className="mb-8 text-3xl font-bold">{article?.meta?.title}</h1>
           <RenderIf when={article?.meta?.hero?.length > 1}>
             <Carousel
               imageSrcs={article?.meta?.hero?.map(

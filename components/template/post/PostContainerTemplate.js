@@ -11,9 +11,9 @@ function PostContainerTemplate({
   // console.log(children);
   return (
     <div className="mx-8 lgp:mx-0">
-      <div className="flex justify-between items-baseline mb-8 -mx-8 lgp:mx-0">
+      <div className="-mx-8 mb-8 flex items-baseline justify-between lgp:mx-0">
         <h1 className="text-4xl font-extrabold">{title}</h1>
-        <p className="text-lg font-semibold text-gray hidden sm:block">
+        <p className="hidden text-lg font-semibold text-gray sm:block">
           {children.length} {subtitle}
         </p>
       </div>

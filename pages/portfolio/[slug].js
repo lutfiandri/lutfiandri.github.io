@@ -13,7 +13,7 @@ function ReadPortfolio({ portfolio }) {
     <DefaultLayout title={portfolio.meta.title}>
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <h1 className="text-3xl font-bold mb-8">{portfolio?.meta?.title}</h1>
+          <h1 className="mb-8 text-3xl font-bold">{portfolio?.meta?.title}</h1>
           <RenderIf when={portfolio?.meta?.hero?.length > 1}>
             <Carousel
               imageSrcs={portfolio?.meta?.hero?.map(
