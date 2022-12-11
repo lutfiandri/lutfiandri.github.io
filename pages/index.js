@@ -26,7 +26,7 @@ export default function Home() {
     <DefaultLayout>
       <Container>
         <div className="flex min-h-screen-no-header flex-col items-center justify-center md:flex-row md:justify-start">
-          <div className="relative mr-8 h-[200px] w-[200px] overflow-hidden rounded-lg">
+          <div className="relative mr-0 h-[200px] w-[200px] overflow-hidden rounded-lg md:mr-8">
             <Image
               src="/images/lutfi-andriyanto.webp"
               alt="Lutfi Andriyanto"
