@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <DefaultLayout>
       <Container>
-        <div className="flex min-h-screen-no-header items-center bg-red md:bg-blue-light">
+        <div className="flex min-h-screen-no-header flex-col items-center justify-center md:flex-row md:justify-start">
           <div className="relative mr-8 h-[200px] w-[200px] overflow-hidden rounded-lg">
             <Image
               src="/images/lutfi-andriyanto.webp"
@@ -36,14 +36,14 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex flex-col space-y-1">
-            <div className="text-3xl font-bold">Hi, it&apos;s me</div>
+          <div className="mt-8 flex flex-col space-y-1 text-center md:mt-0 md:text-left">
+            <div className="text-3xl font-bold ">Hi, it&apos;s me</div>
             <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
               Lutfi Andriyanto
             </h1>
             <h2 className="text-lg font-bold">a Webdev Enthusiast!</h2>
             <div className="h-6"></div>
-            <div className="flex">
+            <div className="flex justify-center  md:justify-start">
               <Socmeds socmeds={SOCMEDS} />
             </div>
           </div>
@@ -57,8 +57,14 @@ function Socmeds({ socmeds = [] }) {
   return (
     <>
       {socmeds.map((socmed) => (
-        <a key={socmed.name} href={socmed.url} target="_blank" rel="noreferrer">
-          <socmed.icon className="mr-4 h-auto w-6" />
+        <a
+          key={socmed.name}
+          href={socmed.url}
+          target="_blank"
+          rel="noreferrer"
+          title={socmed.name}
+        >
+          <socmed.icon className="mr-4 h-auto w-6 duration-200 hover:text-blue" />
         </a>
       ))}
     </>
