@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
 import 'styles/globals.css';
 
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }) {
         </>
       )}
 
-      <Component {...pageProps} />
+      <ThemeProvider enableSystem={false} attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

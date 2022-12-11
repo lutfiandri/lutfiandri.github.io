@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Container from 'components/element/Container';
-import SunIcon2 from 'components/element/ThemeTogglerButton';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useCallback, useMemo } from 'react';
 
 const ROUTES = [
   {
@@ -19,10 +19,16 @@ const ROUTES = [
 function Navbar() {
   const router = useRouter();
 
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const isDark = useMemo(() => theme === 'dark', [theme]);
+  const setIsDark = useCallback(
+    (value) => setTheme(value ? 'dark' : 'light'),
+    [setTheme]
+  );
 
   return (
-    <nav className="bg-gray-light z-50 sticky top-0">
+    <nav className="bg-gray-light dark:bg-gray-dark text-gray-dark dark:text-gray-light z-50 sticky top-0">
       <Container>
         <div className="flex items-center justify-between">
           <div className="flex items-baseline">
@@ -32,7 +38,7 @@ function Navbar() {
               </div>
             </Link>
             <div className="w-12"></div>
-            <div className="flex text-gray-dark">
+            <div className="flex">
               {ROUTES.map((route) => (
                 <Link key={route.name} href={route.url}>
                   <div
@@ -50,9 +56,9 @@ function Navbar() {
               ))}
             </div>
           </div>
-          <div role="button" onClick={() => setIsDark(!isDark)}>
+          {/* <div role="button" onClick={() => setIsDark(!isDark)}>
             <SunIcon2 isDark={isDark} />
-          </div>
+          </div> */}
         </div>
       </Container>
     </nav>

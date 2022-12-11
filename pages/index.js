@@ -1,7 +1,7 @@
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import Image from 'next/image';
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const SOCMEDS = [
   {
@@ -38,7 +38,9 @@ export default function Home() {
           </div>
           <div className="flex flex-col space-y-1">
             <div className="text-3xl font-bold">Hi, it&apos;s me</div>
-            <h1 className="text-4xl font-bold text-blue">Lutfi Andriyanto</h1>
+            <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
+              Lutfi Andriyanto
+            </h1>
             <h2 className="text-lg font-bold">a Webdev Enthusiast!</h2>
             <div className="h-6"></div>
             <div className="flex">

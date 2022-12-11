@@ -18,7 +18,8 @@ function ThemeTogglerButton({ isDark, className }) {
       <svg
         className={clsx(
           'w-5 h-5 overflow-visible duration-500',
-          isDark ? 'rotate-[40deg] delay-500' : 'rotate-[150deg]',
+          isDark ? 'rotate-[40deg]' : 'rotate-[150deg] !delay-[0ms]',
+          // isDark ? 'rotate-[40deg] delay-500' : 'rotate-[150deg]',
           className
         )}
         viewBox="0 0 18 18"
@@ -29,7 +30,7 @@ function ThemeTogglerButton({ isDark, className }) {
             cx={isDark ? 10 : 25}
             cy={isDark ? 2 : 0}
             r="8"
-            className={isDark ? 'delay-500' : ''}
+            // className={isDark ? 'delay-500' : ''}
           ></circle>
         </mask>
         <circle
@@ -37,8 +38,8 @@ function ThemeTogglerButton({ isDark, className }) {
           cy="9"
           r={isDark ? '8' : '5'}
           className={clsx(
-            'ease-bounce-out duration-500',
-            isDark ? 'delay-500' : ''
+            'ease-bounce-out duration-500'
+            // isDark ? 'delay-500' : ''
           )}
           fill="currentColor"
           mask="url(#moon-mask-main-nav)"

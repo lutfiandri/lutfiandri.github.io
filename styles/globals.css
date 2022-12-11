@@ -3,7 +3,7 @@
 @tailwind base;
 
 * {
-  @apply transition-all duration-150;
+  /* @apply transition-all duration-100 ease-bounce-out delay-[0ms]; */
 }
 
 ::-webkit-scrollbar {
@@ -16,7 +16,7 @@
 
 html,
 body {
-  @apply font-sans bg-gray-light text-gray-dark;
+  @apply font-sans bg-gray-light text-gray-dark dark:bg-gray-dark dark:text-gray-light transition-all duration-100 delay-[0ms];
 }
 
 @tailwind components;
