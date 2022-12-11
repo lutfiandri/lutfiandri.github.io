@@ -25,7 +25,12 @@ function MobileNavbar({ show = false }) {
               Lutfi Andriyanto
             </div>
           </Link>
-          <div role="button" onClick={() => setIsOpen(!isOpen)}>
+          <div
+            role="button"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={`${isOpen ? 'Close' : 'Open'} menu`}
+            title={`${isOpen ? 'Close' : 'Open'} menu`}
+          >
             <MobileNavbarTogglerButton
               isOpen={isOpen}
               className="text-gray-dark"
@@ -39,7 +44,8 @@ function MobileNavbar({ show = false }) {
         className={clsx(
           'fixed top-[64px] z-30 min-h-screen-no-header w-[200%] overflow-hidden bg-gray-light backdrop-blur-xl duration-[500ms] ease-out',
           isOpen ? 'left-0' : 'left-[-100%]',
-          isOpen ? 'opacity-[97%]' : 'opacity-0'
+          isOpen ? 'opacity-[97%]' : 'opacity-0',
+          !isOpen && 'pointer-events-none'
         )}
       >
         <div className="w-1/2">
