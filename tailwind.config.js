@@ -26,6 +26,9 @@ module.exports = {
         'screen-no-footer': 'calc(100vh - 224px)',
         'screen-no-header-footer': 'calc(100vh - 56px - 224px)',
       },
+      transitionTimingFunction: {
+        'bounce-out': 'cubic-bezier(.56,-0.04,.22,1.47)',
+      },
     },
     colors: {
       white: '#FFFFFF',
