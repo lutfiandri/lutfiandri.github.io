@@ -36,14 +36,13 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="mt-8 flex flex-col space-y-1 text-center md:mt-0 md:text-left">
+          <div className="flex flex-col space-y-1 pt-8 text-center md:mt-0 md:text-left">
             <div className="text-3xl font-bold ">Hi, it&apos;s me</div>
             <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
               Lutfi Andriyanto
             </h1>
             <h2 className="text-lg font-bold">a Webdev Enthusiast!</h2>
-            <div className="h-6"></div>
-            <div className="flex justify-center  md:justify-start">
+            <div className="flex justify-center gap-4 pt-6 md:justify-start">
               <Socmeds socmeds={SOCMEDS} />
             </div>
           </div>
@@ -64,7 +63,7 @@ function Socmeds({ socmeds = [] }) {
           rel="noreferrer"
           title={socmed.name}
         >
-          <socmed.icon className="mr-4 h-auto w-6 duration-200 hover:text-blue" />
+          <socmed.icon className="h-auto w-6 duration-200 hover:text-blue" />
         </a>
       ))}
     </>
