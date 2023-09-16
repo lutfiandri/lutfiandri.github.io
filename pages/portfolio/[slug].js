@@ -23,9 +23,17 @@ function ReadPortfolio({ portfolio }) {
           </RenderIf>
 
           <RenderIf when={portfolio?.meta?.hero?.length === 1}>
-            <Img
-              src={`/portfolio/${portfolio?.meta?.slug}/${portfolio?.meta?.hero}`}
-            />
+            {portfolio.meta.hero?.[0].includes('mp4') ? (
+              <video loop muted autoPlay controls="">
+                <source
+                  src={`/portfolio/${portfolio?.meta?.slug}/${portfolio?.meta?.hero}`}
+                />
+              </video>
+            ) : (
+              <Img
+                src={`/portfolio/${portfolio?.meta?.slug}/${portfolio?.meta?.hero}`}
+              />
+            )}
           </RenderIf>
 
           <PostMarkdown>{portfolio?.body}</PostMarkdown>
