@@ -56,4 +56,4 @@ Maklumi implementasi UI-nya ke website yang lumayan berantakan karena semua fitu
 
 <!-- def -->
 
-[aulia nur fajriyah]: https://instagram.com/aulianf_lia
+[aulia nur fajriyah]: https://www.linkedin.com/in/aulianurfajriyah
