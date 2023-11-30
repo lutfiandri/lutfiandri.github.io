@@ -5,8 +5,7 @@ desc: Sebuah website untuk mendeteksi American Sign Language.
 external: false
 tags:
   - Machine Learning
-  - Computer Vision
-  - Website
+  - Frontend
 hero:
   - hero-lutfi-asl.mp4
 thumbnail: asl-u.png

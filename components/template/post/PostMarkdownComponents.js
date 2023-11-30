@@ -6,6 +6,27 @@ const P = ({ children }) => {
 };
 
 const Img = ({ src, alt, title }) => {
+  if (src.includes('mp4') || src.includes('webm')) {
+    return (
+      <figure className="my-4 mx-auto w-full max-w-[600px]">
+        <video
+          loop
+          muted
+          autoPlay
+          controls=""
+          className="mx-auto w-full max-w-[600px]"
+        >
+          <source src={src} />
+        </video>
+        <RenderIf when={title}>
+          <figcaption className="text-center text-[0.7em] italic">
+            {title}
+          </figcaption>
+        </RenderIf>
+      </figure>
+    );
+  }
+
   return (
     <figure className="my-4 mx-auto w-full max-w-[600px]">
       <NImage src={src} alt={alt} unoptimized />

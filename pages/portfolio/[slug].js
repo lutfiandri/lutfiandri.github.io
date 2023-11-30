@@ -23,7 +23,8 @@ function ReadPortfolio({ portfolio }) {
           </RenderIf>
 
           <RenderIf when={portfolio?.meta?.hero?.length === 1}>
-            {portfolio.meta.hero?.[0].includes('mp4') ? (
+            {portfolio.meta.hero?.[0].includes('mp4') ||
+            portfolio.meta.hero?.[0].includes('webm') ? (
               <video loop muted autoPlay controls="">
                 <source
                   src={`/portfolio/${portfolio?.meta?.slug}/${portfolio?.meta?.hero}`}

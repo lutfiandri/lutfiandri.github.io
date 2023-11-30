@@ -4,8 +4,7 @@ slug: ppsmb-ugm-2022
 desc: Sebuah website untuk orientasi mahasiswa baru di Universitas Gadjah Mada.
 external: false
 tags:
-  - Next.js
-  - Tailwindcss
+  - Frontend
   - Strapi
 hero:
   - ppsmb-ugm-2022.png
