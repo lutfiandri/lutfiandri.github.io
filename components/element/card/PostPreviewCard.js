@@ -8,7 +8,11 @@ function PostPreviewCard({ meta, baseUrl }) {
   const { title, desc, url, slug, external, tags = '', thumbnail } = meta;
 
   const tagsArr = useMemo(() => {
-    return tags.split(',').map((tag) => tag.trim());
+    try {
+      return tags.split(',').map((tag) => tag.trim());
+    } catch (error) {
+      return [];
+    }
   }, [tags]);
 
   return (
