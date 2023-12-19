@@ -7,10 +7,18 @@ const P = ({ children }) => {
   if (line?.includes('!!!file:image')) {
     const src = line.split(':').at(-1);
     return <Img src={src} />;
-  } else if (line?.includes('!!!file:video')) {
+  }
+
+  if (line?.includes('!!!file:video')) {
     const src = line.split(':').at(-1);
     return <Video src={src} />;
   }
+
+  if (line?.includes('!!!file:pdf')) {
+    const src = line.split(':').at(-1);
+    return <iframe src={src} className="aspect-square w-full"></iframe>;
+  }
+
   return <p className="my-4 text-justify text-lg leading-8">{children}</p>;
 };
 
