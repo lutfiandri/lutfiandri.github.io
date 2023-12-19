@@ -4,19 +4,21 @@ import RenderIf from 'components/element/RenderIf';
 const P = ({ children }) => {
   // console.log(children); // Array [ "ini adalah file pdf" ]
   const line = children?.[0];
-  if (line?.includes('!!!file:image')) {
-    const src = line.split(':').at(-1);
-    return <Img src={src} />;
-  }
+  if (typeof line === 'string') {
+    if (line?.includes('!!!file:image')) {
+      const src = line.split(':').at(-1);
+      return <Img src={src} />;
+    }
 
-  if (line?.includes('!!!file:video')) {
-    const src = line.split(':').at(-1);
-    return <Video src={src} />;
-  }
+    if (line?.includes('!!!file:video')) {
+      const src = line.split(':').at(-1);
+      return <Video src={src} />;
+    }
 
-  if (line?.includes('!!!file:pdf')) {
-    const src = line.split(':').at(-1);
-    return <iframe src={src} className="aspect-square w-full"></iframe>;
+    if (line?.includes('!!!file:pdf')) {
+      const src = line.split(':').at(-1);
+      return <iframe src={src} className="aspect-square w-full"></iframe>;
+    }
   }
 
   return <p className="my-4 text-justify text-lg leading-8">{children}</p>;
@@ -24,7 +26,7 @@ const P = ({ children }) => {
 
 const Img = ({ src, alt, title }) => {
   if (src.includes('mp4') || src.includes('webm')) {
-    return <Video></Video>;
+    return <Video src={src} alt={alt} title={title}></Video>;
   }
 
   return (
