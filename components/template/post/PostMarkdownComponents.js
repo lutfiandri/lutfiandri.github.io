@@ -2,34 +2,47 @@ import { Img as NImage } from 'components/element/img/Img';
 import RenderIf from 'components/element/RenderIf';
 
 const P = ({ children }) => {
+  // console.log(children); // Array [ "ini adalah file pdf" ]
+  const line = children?.[0];
+  if (line?.includes('!!!file:image')) {
+    const src = line.split(':').at(-1);
+    return <Img src={src} />;
+  } else if (line?.includes('!!!file:video')) {
+    const src = line.split(':').at(-1);
+    return <Video src={src} />;
+  }
   return <p className="my-4 text-justify text-lg leading-8">{children}</p>;
 };
 
 const Img = ({ src, alt, title }) => {
   if (src.includes('mp4') || src.includes('webm')) {
-    return (
-      <figure className="my-4 mx-auto w-full max-w-[600px]">
-        <video
-          loop
-          muted
-          autoPlay
-          controls=""
-          className="mx-auto w-full max-w-[600px]"
-        >
-          <source src={src} />
-        </video>
-        <RenderIf when={title}>
-          <figcaption className="text-center text-[0.7em] italic">
-            {title}
-          </figcaption>
-        </RenderIf>
-      </figure>
-    );
+    return <Video></Video>;
   }
 
   return (
     <figure className="my-4 mx-auto w-full max-w-[600px]">
       <NImage src={src} alt={alt} unoptimized />
+      <RenderIf when={title}>
+        <figcaption className="text-center text-[0.7em] italic">
+          {title}
+        </figcaption>
+      </RenderIf>
+    </figure>
+  );
+};
+
+const Video = ({ src, alt, title }) => {
+  return (
+    <figure className="my-4 mx-auto w-full max-w-[600px]">
+      <video
+        loop
+        muted
+        autoPlay
+        controls=""
+        className="mx-auto w-full max-w-[600px]"
+      >
+        <source src={src} />
+      </video>
       <RenderIf when={title}>
         <figcaption className="text-center text-[0.7em] italic">
           {title}

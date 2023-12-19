@@ -2,8 +2,8 @@ backend:
   name: github
   repo: lutfiandri/lutfiandri.github.io
   branch: main # Branch to update (optional; defaults to master)
-media_folder: /public/upload
-public_folder: /upload
+media_folder: /public/uploads
+public_folder: /uploads
 collections:
   - name: 'portfolio'
     label: 'Portfolio'
@@ -14,13 +14,10 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'desc', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - label: 'Tags (separate by comma)'
-        name: 'tags'
-        widget: 'string'
-
+      - { label: 'Tags (separate by comma)', name: 'tags', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Files'
         name: 'files'
         widget: 'list'
         fields:
-          - { label: 'Name', name: 'name', widget: 'file' }
+          - { label: 'File', name: 'file', widget: 'file' }
