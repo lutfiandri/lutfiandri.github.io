@@ -2,27 +2,25 @@ backend:
   name: github
   repo: lutfiandri/lutfiandri.github.io
   branch: main # Branch to update (optional; defaults to master)
-media_folder: /public/img
-public_folder: /img
+media_folder: /public/upload
+public_folder: /upload
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - label: 'Home'
-        name: 'home'
-        file: 'content/home.md'
+  - name: 'portfolio'
+    label: 'Portfolio'
+    create: true
+    folder: 'posts/portfolio'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'desc', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - label: 'Tags (separate by comma)'
+        name: 'tags'
+        widget: 'string'
+
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Files'
+        name: 'files'
+        widget: 'list'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - label: 'Cats'
-            name: 'cats'
-            widget: list
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Description', name: 'description', widget: 'text' }
-          - label: 'Files'
-            name: 'files'
-            widget: list
-            fields:
-              - { label: 'Name', name: 'name', widget: 'file' }
+          - { label: 'Name', name: 'name', widget: 'file' }

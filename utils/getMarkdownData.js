@@ -6,6 +6,8 @@ function getMarkdownData(...paths) {
   const markdown = fs.readFileSync(path.join(...paths), 'utf-8');
 
   const { attributes, body } = frontmatter(markdown);
+  attributes.slug = paths?.at(-1)?.split('.')?.at(0);
+  attributes.date = attributes?.date?.toISOString() || '';
 
   return { meta: attributes, body };
 }

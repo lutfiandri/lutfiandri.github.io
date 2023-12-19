@@ -2,9 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HiOutlineArrowTopRightOnSquare } from 'react-icons/hi2';
 import RenderIf from '../RenderIf';
+import { useMemo } from 'react';
 
 function PostPreviewCard({ meta, baseUrl }) {
-  const { title, desc, url, slug, external, tags = [], thumbnail } = meta;
+  const { title, desc, url, slug, external, tags = '', thumbnail } = meta;
+
+  const tagsArr = useMemo(() => {
+    return tags.split(',').map((tag) => tag.trim());
+  }, [tags]);
+
   return (
     <Link passHref={external} href={external ? url : `/${baseUrl}/${slug}`}>
       <a
@@ -38,7 +44,7 @@ function PostPreviewCard({ meta, baseUrl }) {
                 margin: 0 0.25em;
               }
             `}</style>
-            {tags.map((tag, index) => (
+            {tagsArr.map((tag, index) => (
               // eslint-disable-next-line tailwindcss/no-custom-classname
               <div className="jsx-tag" key={index}>
                 {tag}
