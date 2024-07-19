@@ -3,8 +3,12 @@ title: Klinikoo Dental Scanning
 slug: klinikoo-dental-scanning
 desc: Sebuah web app untuk melakukan deteksi karies menggunakan AI.
 external: false
-tags: Machine Learning, Fullstack
+tags: Internship, Fullstack, Machine Learning
+thumbnail: dental-detection.png
+draft: true
 ---
+
+> Note: Dikarenakan projek ini bersifat tertutup, maka saya tidak memberikan lampiran apapun terkait hal teknis.
 
 Sebuah web app untuk melakukan deteksi karies menggunakan AI. Tampilan web app ini hanya dioptimasi hanya untuk HP dan Tablet. Saya membuat ini dalam magang di [Klinikoo].
 

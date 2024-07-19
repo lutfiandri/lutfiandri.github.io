@@ -7,7 +7,9 @@ files:
   - file: /uploads/1682626756.jpg
   - file: /uploads/screencast-from-2023-10-31-12-46-10.webm
   - file: /uploads/456370_lutfi-andriyanto_tugas-3b_mobile-forensic.pdf
+draft: true
 ---
+
 test test
 
 !!!file:image:/uploads/1682626756.jpg

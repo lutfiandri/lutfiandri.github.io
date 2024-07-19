@@ -3,7 +3,7 @@ title: Tutur
 slug: tutur
 desc: Sebuah website untuk membantu komunikasi dengan disabilitas tunarungu.
 external: false
-tags: Machine Learning, Frontend
+tags: Competition, AI, Website
 thumbnail: dictionary.png
 ---
 

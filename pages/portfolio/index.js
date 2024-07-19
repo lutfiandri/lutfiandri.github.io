@@ -30,10 +30,11 @@ export default Portfolio;
 export async function getStaticProps() {
   const slugs = getPortfolioSlugs();
   const portfolios = slugs.map((slug) => getPortfolioData(slug));
+  const filteredPortfolios = portfolios.filter((p) => !p?.meta?.draft);
 
   return {
     props: {
-      portfolios,
+      portfolios: filteredPortfolios,
     },
   };
 }

@@ -3,7 +3,7 @@ title: ASL Handy
 slug: asl-handy
 desc: Sebuah website untuk mendeteksi American Sign Language.
 external: false
-tags: Machine Learning, Frontend
+tags: Competition, AI, Website
 hero:
   - hero-lutfi-asl.mp4
 thumbnail: asl-u.png
