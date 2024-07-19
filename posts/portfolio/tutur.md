@@ -7,9 +7,7 @@ tags: Competition, AI, Website
 thumbnail: dictionary.png
 ---
 
-> Tutur - Help Communicate for Better Future!
-
-Tutur mendapatan juara 1 di INTENTION IFEST UNPAD 2022.
+> Tutur mendapatkan juara 1 di INTENTION IFEST UNPAD 2022
 
 # Links
 
@@ -59,6 +57,8 @@ Fitur ini memberikan input teks ke user, lalu akan diubah menjadi rangkaian vide
 - [Aulia Nur Fajriyah] as UI/UX Designer. Created all designs for this app.
 - [Daniyal Kautsar] as Machine Learning Developer. Created all Machine Learning model for BISINDO gesture detection.
 - [Annisa Uswa Sofia] as Data Miner. Created dataset needed for Machine Learning model.
+
+> Tutur - Help Communicate for Better Future!
 
 <!-- def -->
 

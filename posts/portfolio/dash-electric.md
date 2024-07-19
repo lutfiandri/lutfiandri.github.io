@@ -11,7 +11,14 @@ thumbnail: landing-page.png
 
 > Note: Karena ini project dari suatu startup, informasi yang saya cantumkan di sini sangat saya batasi
 
-[Dash Electric] merupakan startup yang menyediakan Platform pengiriman untuk B2B di Indonesia. Di sini, saya bekerja sebagai satu dari tiga Backend Engineer yang membuat aplikasi MVP (Minimum Viable Product) atau aplikasi versi pertama dari Dash Electric. Project ini dipimpin oleh Product Manager kebanggaan saya, yakni Mas [Fury Oktria].
+[Dash Electric] merupakan startup yang menyediakan platform pengiriman untuk B2B di Indonesia. Di sini, saya bekerja sebagai satu dari tiga Backend Engineer yang membuat aplikasi MVP (Minimum Viable Product) atau aplikasi versi pertama dari Dash Electric. Project ini dipimpin oleh Product Manager kebanggaan saya, yakni Mas [Fury Oktria].
+
+# Tech Stack
+
+- Javascript
+- PostgreSQL
+- MinIO
+- Firebase Cloud Messaging
 
 <!-- def -->
 
