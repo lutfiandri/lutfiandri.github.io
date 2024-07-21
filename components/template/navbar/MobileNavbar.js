@@ -59,7 +59,7 @@ function MobileNavbar({ show = false }) {
                 <Link key={route.name} href={route.url}>
                   <div
                     className={clsx(
-                      'relative text-lg font-semibold duration-300',
+                      'relative cursor-pointer text-lg font-semibold duration-300',
                       isOpen ? 'left-0' : 'left-[-150%]'
                     )}
                     style={{
