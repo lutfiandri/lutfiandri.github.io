@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
 import ROUTES from './ROUTES';
+import Image from 'next/image';
 
 function DesktopNavbar({ show = false }) {
   const router = useRouter();
@@ -21,10 +22,13 @@ function DesktopNavbar({ show = false }) {
     <nav className="sticky top-0 z-50 grid h-[64px] place-items-center bg-gray-light text-gray-dark">
       <Container>
         <div className="flex items-center justify-between">
-          <div className="flex items-baseline">
+          <div className="flex items-center">
             <Link href="/">
-              <div role="button" className="py-4 text-lg font-bold text-blue">
-                Lutfi Andriyanto
+              <div className="flex flex-row items-center gap-2">
+                <Image src="/logo-upi.svg" alt="upi" height={40} width={40} />
+                <div role="button" className="py-4 text-lg font-bold text-blue">
+                  Lutfi Andriyanto
+                </div>
               </div>
             </Link>
             <div className="w-12"></div>

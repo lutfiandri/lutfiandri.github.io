@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import MobileNavbarTogglerButton from './OpenNavbarTogglerButton';
 import ROUTES from './ROUTES';
+import Image from 'next/image';
 
 function MobileNavbar({ show = false }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,11 @@ function MobileNavbar({ show = false }) {
       <Container>
         <div className="flex items-center justify-between">
           <Link href="/">
-            <div role="button" className="py-4 text-lg font-bold text-blue">
-              Lutfi Andriyanto
+            <div className="flex flex-row items-center gap-2">
+              <Image src="/logo-upi.svg" alt="upi" height={40} width={40} />
+              <div role="button" className="py-4 text-lg font-bold text-blue">
+                Lutfi Andriyanto
+              </div>
             </div>
           </Link>
           <div
