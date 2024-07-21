@@ -15,7 +15,7 @@ function PostPreviewCard({ meta, baseUrl }) {
       >
         <RenderIf when={thumbnail}>
           <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-md object-center">
-            {thumbnail.includes('mp4') || thumbnail.includes('webm') ? (
+            {thumbnail?.includes('mp4') || thumbnail?.includes('webm') ? (
               <video
                 loop
                 muted
