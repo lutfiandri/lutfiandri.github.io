@@ -7,7 +7,7 @@ tags:
   - Competition
   - AI
   - Website
-thumbnail: dictionary.png
+thumbnail: recognition.gif
 ---
 
 > Tutur mendapatkan juara 1 di INTENTION IFEST UNPAD 2022

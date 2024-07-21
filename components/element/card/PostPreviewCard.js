@@ -15,14 +15,25 @@ function PostPreviewCard({ meta, baseUrl }) {
       >
         <RenderIf when={thumbnail}>
           <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-md object-center">
-            <Image
-              src={`/${baseUrl}/${slug}/${thumbnail}`}
-              alt={title}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              className="duration-500 group-hover:scale-105"
-            />
+            {thumbnail.includes('mp4') || thumbnail.includes('webm') ? (
+              <video
+                loop
+                muted
+                autoPlay
+                className="h-full object-cover object-center duration-500 group-hover:scale-105"
+              >
+                <source src={`/${baseUrl}/${slug}/${thumbnail}`} />
+              </video>
+            ) : (
+              <Image
+                src={`/${baseUrl}/${slug}/${thumbnail}`}
+                alt={title}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                className="duration-500 group-hover:scale-105"
+              />
+            )}
           </div>
         </RenderIf>
         <div className="mb-2">
