@@ -12,18 +12,7 @@ hero:
 thumbnail: asl-u.png
 ---
 
-Sebuah website untuk mendeteksi American Sign Language (ASL). Mendapatkan peringkat 2 pada Summer School DTETI 2022. Team up with [Aulia Nur Fajriyah] as gorgeous UI designer.
-
-# Links
-
-- Github: [github.com/lutfiandri/asl-handy](https://github.com/lutfiandri/asl-handy)
-- The site: [aslhandy.netlify.app](https://aslhandy.netlify.app/)
-
-# Tech Stack
-
-- Vanilla JS
-- Mediapipe
-- Tenfsorflowjs
+Sebuah website untuk mendeteksi American Sign Language (ASL). Mendapatkan peringkat 2 pada Summer School DTETI 2022 yang dibuat hanya dalam 3 hari. Team up with [Aulia Nur Fajriyah] as gorgeous UI designer.
 
 # Features
 
@@ -50,9 +39,16 @@ ASL Handy akan menalkuan terjemahan dari teks ke kumpulan gambar ASL. ASL Handy 
 
 ![ASL Translator](/portfolio/asl-handy/asl-translator.png)
 
----
+# Links
 
-Maklumi implementasi UI-nya ke website yang lumayan berantakan karena semua fiturnya cuma dibuat 3 hari aja hehe :D
+- Github: [github.com/lutfiandri/asl-handy](https://github.com/lutfiandri/asl-handy)
+- The site: [aslhandy.netlify.app](https://aslhandy.netlify.app/)
+
+# Tech Stack
+
+- Vanilla JS
+- Mediapipe
+- Tenfsorflowjs
 
 <!-- def -->
 

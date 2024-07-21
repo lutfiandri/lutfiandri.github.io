@@ -12,23 +12,6 @@ thumbnail: dictionary.png
 
 > Tutur mendapatkan juara 1 di INTENTION IFEST UNPAD 2022
 
-# Links
-
-- Github: [github.com/lutfiandri/bisindo-ifest](https://github.com/lutfiandri/bisindo-ifest)
-- The site: [bisindo-ifest.vercel.app](https://bisindo-ifest.vercel.app)
-
-# Tech Stack
-
-- Next.js
-- Mediapipe
-- Tensorflowjs
-
-# Presentation
-
-<div class="video-wrapper">
-  <iframe src="https://www.youtube.com/embed/W5K7v6cJqBY?si=yuQUhb-5Wp83rI65&amp;start=3630" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
 # Features (and What I've Done)
 
 ## Recognition ⭐
@@ -60,6 +43,23 @@ Fitur ini memberikan input teks ke user, lalu akan diubah menjadi rangkaian vide
 - [Aulia Nur Fajriyah] as UI/UX Designer. Created all designs for this app.
 - [Daniyal Kautsar] as Machine Learning Developer. Created all Machine Learning model for BISINDO gesture detection.
 - [Annisa Uswa Sofia] as Data Miner. Created dataset needed for Machine Learning model.
+
+# Links
+
+- Github: [github.com/lutfiandri/bisindo-ifest](https://github.com/lutfiandri/bisindo-ifest)
+- The site: [bisindo-ifest.vercel.app](https://bisindo-ifest.vercel.app)
+
+# Tech Stack
+
+- Next.js
+- Mediapipe
+- Tensorflowjs
+
+# Presentation
+
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/W5K7v6cJqBY?si=yuQUhb-5Wp83rI65&amp;start=3630" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 > Tutur - Help Communicate for Better Future!
 
