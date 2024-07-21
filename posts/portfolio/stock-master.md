@@ -32,7 +32,7 @@ Dalam gamifikasi, pengguna akan mendapatkan salah satu jenis soal untuk menggamb
 
 ## Price Forecasting
 
-![Price Forecasting](/portfolio/stock-master/stock-forcasting.png 'stock forecasting')
+![Price Forecasting](/portfolio/stock-master/price-forecasting.png 'stock price forecasting')
 
 Fitur ini memberikan prediksi harga saham setahun ke depan berdasar harga 4 tahun ke belakang. Adapun prediksi dilakukan tiap minggu dengan cron.
 
