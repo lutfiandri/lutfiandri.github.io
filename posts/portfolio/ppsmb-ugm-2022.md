@@ -3,7 +3,10 @@ title: PPSMB UGM 2022
 slug: ppsmb-ugm-2022
 desc: Sebuah website untuk orientasi mahasiswa baru di Universitas Gadjah Mada.
 external: false
-tags: UGM, Frontend, Strapi
+tags:
+  - UGM
+  - Frontend
+  - Strapi
 hero:
   - ppsmb-ugm-2022.png
   - beranda.png

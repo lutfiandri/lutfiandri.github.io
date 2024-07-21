@@ -3,7 +3,9 @@ title: Tumbuh
 slug: tumbuh-in
 desc: MVP dari startup Tumbuh yang merupakan Platform peminjaman uang untuk B2B.
 external: false
-tags: MVP, Startup, Backend
+tags:
+  - MVP Startup
+  - Backend
 hero:
   - landing-page.png
 thumbnail: landing-page.png

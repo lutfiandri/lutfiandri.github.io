@@ -2,7 +2,8 @@
 title: Test
 desc: asdf;lj
 date: 2023-12-19T12:19:31.285Z
-tags: testing
+tags:
+  - testing
 files:
   - file: /uploads/1682626756.jpg
   - file: /uploads/screencast-from-2023-10-31-12-46-10.webm

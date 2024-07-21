@@ -3,7 +3,9 @@ title: Dash Electric
 slug: dash-electric
 desc: MVP dari startup Dash Electric yang merupakan Platform pengiriman untuk B2B.
 external: false
-tags: MVP, Startup, Backend
+tags:
+  - MVP Startup
+  - Backend
 hero:
   - landing-page.png
 thumbnail: landing-page.png

@@ -3,7 +3,10 @@ title: ASL Handy
 slug: asl-handy
 desc: Sebuah website untuk mendeteksi American Sign Language.
 external: false
-tags: Competition, AI, Website
+tags:
+  - Competition
+  - AI
+  - Website
 hero:
   - hero-lutfi-asl.mp4
 thumbnail: asl-u.png

@@ -3,7 +3,10 @@ title: Generator Cerita Jawa (Gemastik)
 slug: gemastik-data-mining
 desc: Penelitian generator cerita berbahasa Jawa dengan finetuning GPT-2.
 external: false
-tags: Competition, AI, GPT-2
+tags:
+  - Competition
+  - AI
+  - GPT-2
 thumbnail: generator-example.png
 ---
 

@@ -5,15 +5,7 @@ import RenderIf from '../RenderIf';
 import { useMemo } from 'react';
 
 function PostPreviewCard({ meta, baseUrl }) {
-  const { title, desc, url, slug, external, tags = '', thumbnail } = meta;
-
-  const tagsArr = useMemo(() => {
-    try {
-      return tags.split(',').map((tag) => tag.trim());
-    } catch (error) {
-      return [];
-    }
-  }, [tags]);
+  const { title, desc, url, slug, external, tags, thumbnail } = meta;
 
   return (
     <Link passHref={external} href={external ? url : `/${baseUrl}/${slug}`}>
@@ -48,7 +40,7 @@ function PostPreviewCard({ meta, baseUrl }) {
                 margin: 0 0.25em;
               }
             `}</style>
-            {tagsArr.map((tag, index) => (
+            {tags.map((tag, index) => (
               // eslint-disable-next-line tailwindcss/no-custom-classname
               <div className="jsx-tag" key={index}>
                 {tag}
