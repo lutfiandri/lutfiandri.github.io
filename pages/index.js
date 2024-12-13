@@ -41,7 +41,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
               Lutfi Andriyanto
             </h1>
-            <h2 className="text-lg font-bold">a Webdev Enthusiast!</h2>
+            <h2 className="text-lg font-bold">a Software Engineer!</h2>
             <div className="flex justify-center gap-4 pt-6 md:justify-start">
               <Socmeds socmeds={SOCMEDS} />
             </div>

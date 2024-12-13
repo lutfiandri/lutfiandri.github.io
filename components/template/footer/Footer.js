@@ -60,7 +60,7 @@ function Footer() {
               >
                 Lutfi Andriyanto
               </div>
-              <div className="text-sm font-semibold">Webdev Enthusiast</div>
+              <div className="text-sm font-semibold">Software Engineer</div>
             </div>
             <div className="hidden md:block">
               <Copyright />
