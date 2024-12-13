@@ -8,6 +8,7 @@ tags:
   - AI
   - GPT-2
 thumbnail: generator-example.png
+pinned: false
 ---
 
 > Proposal generator cerita jawa ini membuat tim kami masuk final Gemastik

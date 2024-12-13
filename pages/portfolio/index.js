@@ -35,9 +35,18 @@ export async function getStaticProps() {
   const slugs = getPortfolioSlugs();
   const portfolios = slugs.map((slug) => getPortfolioData(slug));
   const filteredPortfolios = portfolios.filter((p) => !p?.meta?.draft);
+  const sortedPortfolios = filteredPortfolios.sort((a, b) => {
+    // set meta.pinned true to top
+    if (a?.meta?.pinned && !b?.meta?.pinned) {
+      return -1;
+    } else if (!a?.meta?.pinned && b?.meta?.pinned) {
+      return 1;
+    }
+    return 1;
+  });
 
   const tagCountMap = new Map();
-  filteredPortfolios.forEach((portfolio) => {
+  sortedPortfolios.forEach((portfolio) => {
     portfolio?.meta?.tags?.forEach((tag) => {
       if (tagCountMap.has(tag)) {
         tagCountMap.set(tag, tagCountMap.get(tag) + 1);

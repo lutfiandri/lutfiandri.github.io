@@ -9,6 +9,7 @@ tags:
   - AI
 thumbnail: dental-detection.png
 draft: true
+pinned: false
 ---
 
 > Note: Dikarenakan projek ini bersifat tertutup, maka saya tidak memberikan lampiran apapun terkait hal teknis.

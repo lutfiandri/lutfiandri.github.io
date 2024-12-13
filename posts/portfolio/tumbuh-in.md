@@ -9,6 +9,7 @@ tags:
 hero:
   - landing-page.png
 thumbnail: landing-page.png
+pinned: false
 ---
 
 > Note: Karena ini project dari suatu startup, informasi yang saya cantumkan di sini sangat saya batasi

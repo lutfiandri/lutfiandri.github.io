@@ -10,6 +10,7 @@ tags:
 hero:
   - hero-lutfi-asl.mp4
 thumbnail: asl-u.png
+pinned: true
 ---
 
 Sebuah website untuk mendeteksi American Sign Language (ASL). Mendapatkan peringkat 2 pada Summer School DTETI 2022 yang dibuat hanya dalam 3 hari. Team up with [Aulia Nur Fajriyah] as gorgeous UI designer.

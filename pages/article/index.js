@@ -35,9 +35,18 @@ export async function getStaticProps() {
   const slugs = getArticleSlugs();
   const articles = slugs.map((slug) => getArticleData(slug));
   const filteredArticles = articles.filter((p) => !p?.meta?.draft);
+  const sortedArticles = filteredArticles.sort((a, b) => {
+    // set meta.pinned true to top
+    if (a?.meta?.pinned && !b?.meta?.pinned) {
+      return -1;
+    } else if (!a?.meta?.pinned && b?.meta?.pinned) {
+      return 1;
+    }
+    return 1;
+  });
 
   const tagCountMap = new Map();
-  filteredArticles.forEach((article) => {
+  sortedArticles.forEach((article) => {
     article?.meta?.tags?.forEach((tag) => {
       if (tagCountMap.has(tag)) {
         tagCountMap.set(tag, tagCountMap.get(tag) + 1);

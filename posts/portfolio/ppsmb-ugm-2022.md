@@ -17,6 +17,7 @@ hero:
   - materi.png
   - kiprah-intelektual.png
 thumbnail: ppsmb-ugm-2022.png
+pinned: true
 ---
 
 Sebuah website untuk orientasi mahasiswa baru di Universitas Gadjah Mada. Website ini kami kerjakan sebagai tim beranggotakan 7 orang dalam kurun waktu 5 bulan. Website ini sukses diluncurkan pada Mei 2022 dan telah diakses lebih dari 70 ribu kali hingga masa PPSMB berakhir di akhir Agustus 2022.

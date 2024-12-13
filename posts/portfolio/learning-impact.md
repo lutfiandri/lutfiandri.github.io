@@ -8,6 +8,7 @@ tags:
 hero:
   - learning-impact.webp
 thumbnail: learning-impact.webp
+pinned: false
 ---
 
 Learning Impact adalah platform gamifikasi yang dirancang Mbak [Faza] untuk Thesis Master of Information Engineering UGM. Dislaimer: semua design dan asset berasal dari Mbak [Faza].

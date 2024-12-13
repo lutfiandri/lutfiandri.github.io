@@ -10,6 +10,7 @@ tags:
 thumbnail: kana.png
 hero:
   - kana.png
+pinned: true
 ---
 
 > Stock Master mendapatkan juara 1 di Web Development IFEST UNPAD 2023
