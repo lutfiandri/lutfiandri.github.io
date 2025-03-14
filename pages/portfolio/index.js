@@ -1,7 +1,7 @@
 import PostPreviewCard from 'components/element/card/PostPreviewCard';
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
-import PostsTemplate from 'components/template/post/PostContainerTemplate';
+import PostsContainerTemplate from 'components/template/post/PostContainerTemplate';
 import { getPortfolioData } from 'utils/getMarkdownData';
 import { getPortfolioSlugs } from 'utils/getSlugs';
 
@@ -10,7 +10,7 @@ function Portfolio({ portfolios, tagCounts }) {
     <DefaultLayout title="Portfolio">
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <PostsTemplate
+          <PostsContainerTemplate
             title="My Portfolio"
             subtitle="Projects"
             tagCounts={tagCounts}
@@ -22,7 +22,7 @@ function Portfolio({ portfolios, tagCounts }) {
                 baseUrl="portfolio"
               />
             ))}
-          </PostsTemplate>
+          </PostsContainerTemplate>
         </div>
       </Container>
     </DefaultLayout>

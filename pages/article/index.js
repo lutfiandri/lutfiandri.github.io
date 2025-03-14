@@ -1,7 +1,7 @@
 import PostPreviewCard from 'components/element/card/PostPreviewCard';
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
-import PostsTemplate from 'components/template/post/PostContainerTemplate';
+import PostsContainerTemplate from 'components/template/post/PostContainerTemplate';
 import { getArticleData } from 'utils/getMarkdownData';
 import { getArticleSlugs } from 'utils/getSlugs';
 
@@ -10,7 +10,7 @@ function Article({ articles, tagCounts }) {
     <DefaultLayout title="Article">
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <PostsTemplate
+          <PostsContainerTemplate
             title="Latest Content"
             subtitle="Articles"
             tagCounts={tagCounts}
@@ -22,7 +22,7 @@ function Article({ articles, tagCounts }) {
                 baseUrl="article"
               />
             ))}
-          </PostsTemplate>
+          </PostsContainerTemplate>
         </div>
       </Container>
     </DefaultLayout>

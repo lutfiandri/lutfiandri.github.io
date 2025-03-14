@@ -1,7 +1,11 @@
+import PostPreviewCard from 'components/element/card/PostPreviewCard';
 import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
+import PostContainerTemplate from 'components/template/post/PostContainerTemplate';
 import Image from 'next/image';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { getPortfolioData } from 'utils/getMarkdownData';
+import { getPortfolioSlugs } from 'utils/getSlugs';
 
 const SOCMEDS = [
   {
@@ -21,10 +25,11 @@ const SOCMEDS = [
   },
 ];
 
-export default function Home() {
+export default function Home({ portfolios }) {
   return (
     <DefaultLayout>
       <Container>
+        {/* top banner */}
         <div className="flex min-h-screen-no-header flex-col items-center justify-center md:flex-row md:justify-start">
           <div className="relative mr-0 h-[200px] w-[200px] overflow-hidden rounded-lg md:mr-8">
             <Image
@@ -47,6 +52,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <PostContainerTemplate
+          title="Best Portfolio"
+          smallTitle
+          pathSeeAll="/portfolio"
+          extraPaddingY
+        >
+          {portfolios.map((portfolio) => (
+            <PostPreviewCard
+              key={portfolio.meta.slug}
+              meta={portfolio.meta}
+              baseUrl="portfolio"
+            />
+          ))}
+        </PostContainerTemplate>
       </Container>
     </DefaultLayout>
   );
@@ -68,4 +88,16 @@ function Socmeds({ socmeds = [] }) {
       ))}
     </>
   );
+}
+
+export async function getStaticProps() {
+  const slugs = getPortfolioSlugs();
+  const portfolios = slugs.map((slug) => getPortfolioData(slug));
+  const filteredPortfolios = portfolios.filter((p) => p?.meta?.pinned);
+
+  return {
+    props: {
+      portfolios: filteredPortfolios,
+    },
+  };
 }
